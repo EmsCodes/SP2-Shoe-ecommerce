@@ -1,0 +1,40 @@
+.featured-products-carousel {
+	width: 80%;
+	max-width: px;
+	margin: 50px auto;
+	min-height: 200px;
+
+	.carousel {
+		display: inline-flex;
+		transition: all 0.3s;
+	}
+	.carousel-inner {
+		overflow: hidden;
+	}
+	.card-container {
+		width: 125px;
+		height: 150px;
+		padding-right: 15px;
+		box-sizing: border-box;
+
+		.card {
+			width: 100%;
+			height: 100%;
+			border: 1px solid #ccc;
+			// box-sizing: border-box;
+			border-radius: 5px;
+			display: flex;
+		}
+	}
+	.hide {
+		display: none;
+	}
+	.show {
+		display: inline-block;
+	}
+}
+
+form {
+	flex: 100%;
+	order: 4;
+}
