@@ -1,5 +1,9 @@
 import { url } from "./data/api.js";
 import heroBanner from "./ui/indexHeroBanner.js";
+import featuredProducts from "./ui/featuredProducts.js";
+
+const heroContainer = ".hero-background";
+const carouselContainer = ".carousel";
 
 async function fetchProducts() {
 	try {
@@ -9,7 +13,8 @@ async function fetchProducts() {
 		const products = await productResponse.json();
 		const heroImage = await heroBannerResponse.json();
 
-		heroBanner(heroImage);
+		heroBanner(heroImage, heroContainer);
+		featuredProducts(products, carouselContainer);
 
 		// featuredProducts(products, container);
 	} catch (error) {
@@ -26,15 +31,11 @@ const carousel = document.querySelector(".carousel");
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
 
-let carouselWidth = document.querySelector(
-	".featured-products-carousel"
-).offsetWidth;
+let carouselWidth = document.querySelector(".featured-products").offsetWidth;
 
-window.addEventListener("resize", () => {
-	carouselWidth = document.querySelector(
-		".featured-products-carousel"
-	).offsetWidth;
-});
+// window.addEventListener("resize", () => {
+// 	carouselWidth = document.querySelector(".featured-products").offsetWidth;
+// });
 
 console.log(carouselWidth);
 

@@ -1,29 +1,75 @@
-.featured-products-carousel {
-	width: 80%;
-	max-width: px;
-	margin: 50px auto;
-	min-height: 200px;
+.featured-products {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-left: 10%;
+	margin-top: 40px;
+	margin-bottom: 75px;
+	position: relative;
 
 	.carousel {
 		display: inline-flex;
 		transition: all 0.3s;
+		position: relative;
+	}
+	.carousel-nav {
+		display: flex;
+		justify-content: space-between;
+		.next,
+		.previous {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.next {
+			right: 10%;
+		}
+		.previous {
+			left: 0;
+		}
 	}
 	.carousel-inner {
 		overflow: hidden;
 	}
 	.card-container {
-		width: 125px;
-		height: 150px;
+		min-height: 225px;
+		max-height: 250px;
 		padding-right: 15px;
 		box-sizing: border-box;
+		margin-left: 10px;
+		margin-bottom: 35px;
 
 		.card {
 			width: 100%;
+			max-width: 150px;
 			height: 100%;
-			border: 1px solid #ccc;
-			// box-sizing: border-box;
+			max-height: 250px;
+			box-sizing: border-box;
+			border: none;
 			border-radius: 5px;
-			display: flex;
+			box-shadow: $box-shadow;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			position: relative;
+
+			.buy-info {
+				display: flex;
+				justify-content: space-between;
+			}
+			.card-info {
+				width: 85%;
+				padding-top: 10px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+			}
+			.card-img-top {
+				height: 60%;
+				object-fit: cover;
+			}
+			.card-body {
+				height: 40%;
+			}
 		}
 	}
 	.hide {
@@ -32,9 +78,4 @@
 	.show {
 		display: inline-block;
 	}
-}
-
-form {
-	flex: 100%;
-	order: 4;
 }

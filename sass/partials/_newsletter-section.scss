@@ -1,0 +1,32 @@
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	padding-top: 25px;
+
+	.newsletter__form {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.newsletter__img {
+		padding-top: 25px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		min-height: 150px;
+		margin-bottom: 0px;
+
+		.news-img {
+			background-image: url("/images/green-shoe.jpg");
+			background-size: cover;
+			background-position: bottom;
+		}
+		.sale-img {
+			background-image: url("/images/sale-img.jpg");
+			background-size: cover;
+		}
+		.vip-img {
+			background-image: url("/images/special-offer.jpg");
+			background-size: cover;
+		}
+	}
+}

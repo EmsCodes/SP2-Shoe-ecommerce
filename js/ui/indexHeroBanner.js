@@ -1,7 +1,7 @@
 import { url } from "../data/api.js";
 
-export default function heroBanner(img) {
-	const imgContainer = document.querySelector(".hero-background");
+export default function heroBanner(img, container) {
+	const imgContainer = document.querySelector(container);
 
 	const heroImg = img.hero_banner.formats.large.url;
 

@@ -15,6 +15,7 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/wvv0hvk.css" />
 		<title>Handmade | Home</title>
 	</head>
 	<body>
@@ -24,7 +25,7 @@
 					<a class="navbar-brand" href="index.html"
 						><img class="logo" src="/images/Logo.png" alt="Handmade logo"
 					/></a>
-					<form class="search-bar d-block">
+					<form class="search-bar">
 						<label for="search" class="sr-only">Search</label>
 						<input
 							type="search"
@@ -70,90 +71,60 @@
 			</nav>
 		</header>
 		<main>
-			<div class="hero-background leather-pattern">
-				<div class="test"></div>
-				<h1>Handmade</h1>
-				<h2>Quality Shoes for men and women, made to last</h2>
-				<a href="products.html"> Shop</a>
-			</div>
-			<div class="featured-products-carousel">
+			<section class="hero-background">
+				<div class="hero-text">
+					<h1>Handmade</h1>
+					<p>Quality shoes for men and women, made to last</p>
+					<a href="products.html">Shop</a>
+				</div>
+			</section>
+			<section class="featured-products">
 				<h3>Featured</h3>
 				<div class="carousel-inner">
-					<div class="carousel">
-						<div class="card-container">
-							<div class="card">
-								<div class="img">1</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">2</div>
-								<div class="info">Title 2</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">3</div>
-								<div class="info">Title 3</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">4</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">5</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">6</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">7</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">8</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">9</div>
-								<div class="info">Title 1</div>
-							</div>
-						</div>
-						<div class="card-container">
-							<div class="card">
-								<div class="img">10</div>
-								<div class="info">Title 1</div>
+					<div class="carousel"></div>
+					<nav class="carousel-nav" aria-label="carousel navigation">
+						<button class="previous hide">
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button class="next"><i class="fas fa-chevron-right"></i></button>
+					</nav>
+				</div>
+				<div class="more">
+					<a class="more-btn" href="products.html">More products</a>
+				</div>
+			</section>
+			<section class="reviews">
+				<h3>Customer reviews</h3>
+				<div class="row d-flex flex-row flex-nowrap">
+					<div class="col">
+						<div class="card">
+							<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
+							<div class="card-body">
+								<p class="card-title">Title</p>
 							</div>
 						</div>
 					</div>
-					<button class="previous hide">
-						<i class="fas fa-chevron-left"></i>
-					</button>
-					<button class="next"><i class="fas fa-chevron-right"></i></button>
+					<div class="col">
+						<div class="card">
+							<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
+							<div class="card-body">
+								<p class="card-title">Title</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
+							<div class="card-body">
+								<p class="card-title">Title</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<a href="products.html">More products</a>
-			</div>
-			<div class="reviews">
-				<h4>Customer reviews</h4>
-			</div>
+			</section>
 			<div class="newsletter">
 				<div class="newsletter__form">
-					<h5>Subscribe to Newsletter</h5>
+					<h3>Subscribe to Newsletter</h3>
 					<ul>
 						<li>News</li>
 						<li>Deals</li>
@@ -175,30 +146,32 @@
 			</div>
 		</main>
 		<footer>
-			<div class="footer-navigation">
-				<a href="index.html">
-					<img src="/images/Logo.png" alt="Handmade logo" />
-				</a>
-				<nav aria-label="Footer navigation">
-					<ul>
-						<li><a href="about.html">Contact</a></li>
-						<li><a href="about.html">Help</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="about.html">FAQ</a></li>
-						<li><a href="about.html">Admin login</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="contact-info">
-				<p>Adress, 0000</p>
-				<p>handmade@handmade.com</p>
-				<p>Tel:555 55 555</p>
-				<div class="social-media">
-					<h6>Follow us on</h6>
-					<i class="fab fa-facebook"></i>
-					<i class="fab fa-instagram"></i>
-					<i class="fab fa-twitter"></i>
-				</div>
+			<div class="wrapper">
+				<section class="footer-navigation">
+					<a href="index.html">
+						<img src="/images/Logo.png" alt="Handmade logo" />
+					</a>
+					<nav aria-label="Footer navigation">
+						<ul>
+							<li><a href="about.html">Contact</a></li>
+							<li><a href="about.html">Help</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="about.html">FAQ</a></li>
+							<li><a href="about.html">Admin login</a></li>
+						</ul>
+					</nav>
+				</section>
+				<section class="contact-info">
+					<p>Adress, 0000</p>
+					<p>handmade@handmade.com</p>
+					<p>Tel:555 55 555</p>
+					<div class="social-media">
+						<h6>Follow us on</h6>
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-twitter"></i>
+					</div>
+				</section>
 			</div>
 			<p class="copyright">&copy2021 Handmade</p>
 		</footer>

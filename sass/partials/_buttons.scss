@@ -1,0 +1,58 @@
+@mixin button-style {
+	border: 3px solid $dark-brown;
+	border-style: dotted;
+	border-width: 2px;
+	text-align: center;
+	border-radius: 30px;
+	background: url("/images/brown-leather.png");
+	text-decoration: none;
+	color: $light-beige;
+	padding: 10px 25px;
+	display: inline-block;
+}
+
+.hero-background {
+	a {
+		@include button-style;
+		font-family: $secondary-heading-font;
+		width: 50vw;
+		box-shadow: 7.5px 7.5px 15px #000;
+	}
+}
+
+// carousel button
+.carousel-nav {
+	.next,
+	.previous {
+		border: none;
+		background-color: $primary-brown;
+		opacity: 0.6;
+		padding: 10px 10px;
+	}
+	.next {
+		border-radius: 5px 0 0 5px;
+	}
+	.previous {
+		border-radius: 0 5px 5px 0;
+	}
+	.fas {
+		font-size: 1.2em;
+		color: $white;
+	}
+}
+
+// featured products "more" link
+
+.featured-products {
+	.more {
+		text-align: center;
+		transform: translateX(-10%);
+
+		.more-btn {
+			@include button-style;
+			width: 50%;
+			margin-top: 20px;
+			box-shadow: $box-shadow;
+		}
+	}
+}

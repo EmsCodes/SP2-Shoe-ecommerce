@@ -1,0 +1,16 @@
+.reviews {
+	background-color: $beige;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	.row {
+		width: 90%;
+		margin: 0 auto;
+		max-width: 1280px;
+
+		.card-body {
+			width: 100%;
+			max-width: 150px;
+			max-height: 250px;
+		}
+	}
+}

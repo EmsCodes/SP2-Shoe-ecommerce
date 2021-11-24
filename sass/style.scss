@@ -1,3 +1,4 @@
+@import "partials/variables";
 @import "partials/custom";
 
 // scss-docs-start import-stack
@@ -20,7 +21,6 @@
 @import "../bootstrap-scss/buttons";
 @import "../bootstrap-scss/transitions";
 @import "../bootstrap-scss/dropdown";
-@import "../bootstrap-scss/button-group";
 @import "../bootstrap-scss/nav";
 @import "../bootstrap-scss/navbar";
 @import "../bootstrap-scss/card";
@@ -40,7 +40,14 @@
 @import "../bootstrap-scss/spinners";
 @import "../bootstrap-scss/placeholders";
 
+@import "partials/typography";
+@import "partials/layout";
+@import "partials/footer";
 @import "partials/icons";
+@import "partials/header";
 @import "partials/carousel";
+@import "partials/newsletter-section";
 @import "partials/forms";
-@import "partials/hero";
+@import "partials/hero-section";
+@import "partials/reviews";
+@import "partials/buttons";
