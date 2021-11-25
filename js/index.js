@@ -1,6 +1,13 @@
 import { url } from "./data/api.js";
 import heroBanner from "./ui/indexHeroBanner.js";
 import featuredProducts from "./ui/featuredProducts.js";
+import { displaySearchBar } from "./components/search.js";
+
+// display searchbar function for mobile and tablet
+const searchBtn = document.querySelector(".search-icon");
+searchBtn.addEventListener("click", displaySearchBar);
+
+searchBtn.addEventListener("onkeyup", displaySearchBar);
 
 const heroContainer = ".hero-background";
 const carouselContainer = ".carousel";
@@ -60,18 +67,3 @@ previous.addEventListener("click", () => {
 	}
 	carousel.style.transform = `translateX(${-index * carouselWidth}px)`;
 });
-
-// Function to display search form onclick
-
-const searchBtn = document.querySelector(".search-icon");
-const searchBar = document.querySelector(".search-bar");
-
-function displaySearchBar() {
-	if (searchBar.style.display === "none") {
-		searchBar.style.display = "block";
-		document.querySelector("#search").focus();
-	} else {
-		searchBar.style.display = "none";
-	}
-}
-searchBtn.addEventListener("click", displaySearchBar);

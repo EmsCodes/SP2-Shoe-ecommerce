@@ -1,14 +1,22 @@
 header {
-	.search-bar {
-		// display: none;
-	}
+	// .search-bar {
+	// 	display: none;
+	// }
 	form {
 		flex: 0 0 100%;
 		order: 4;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		position: absolute;
+		top: 10vh;
+		left: 5%;
+		right: 5%;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.253);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-radius: 5px;
 	}
 	input[type="search"] {
 		padding: 7.5px 5px;
+		margin: 0 auto;
 	}
 }

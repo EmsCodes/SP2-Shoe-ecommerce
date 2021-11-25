@@ -639,8 +639,8 @@ progress {
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 7.5px);
-  padding-left: var(--bs-gutter-x, 7.5px);
+  padding-right: var(--bs-gutter-x, 0px);
+  padding-left: var(--bs-gutter-x, 0px);
   margin-right: auto;
   margin-left: auto;
 }
@@ -676,7 +676,7 @@ progress {
 }
 
 .row {
-  --bs-gutter-x: 15px;
+  --bs-gutter-x: 0px;
   --bs-gutter-y: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5101,7 +5101,7 @@ fieldset:disabled .btn {
 }
 
 .card-group > .card {
-  margin-bottom: 7.5px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 576px) {
@@ -6085,7 +6085,7 @@ fieldset:disabled .btn {
 }
 
 .toast-container > :not(:last-child) {
-  margin-bottom: 7.5px;
+  margin-bottom: 0px;
 }
 
 .toast-header {
@@ -7116,7 +7116,7 @@ h1, .h1 {
   max-width: 80vw;
   margin: 0 auto;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 
 .hero-text a {
@@ -7187,6 +7187,10 @@ h1, .h1 {
           box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 footer {
   margin-top: 25px;
 }
@@ -7206,6 +7210,85 @@ footer .copyright {
 
 footer .social-media {
   text-align: center;
+}
+
+.hero-background a {
+  border: 3px solid #40210f;
+  border-style: dotted;
+  border-width: 2px;
+  text-align: center;
+  border-radius: 30px;
+  background: url("/images/brown-leather.png");
+  text-decoration: none;
+  color: #ffddbe;
+  padding: 10px 25px;
+  display: inline-block;
+  font-family: "corporate-a-condensed", serif;
+  width: 50vw;
+  -webkit-box-shadow: 7.5px 7.5px 15px #000;
+          box-shadow: 7.5px 7.5px 15px #000;
+}
+
+.carousel-nav .next,
+.carousel-nav .previous {
+  border: none;
+  background-color: #a8592e;
+  opacity: 0.6;
+  padding: 10px 10px;
+}
+
+.carousel-nav .next {
+  border-radius: 5px 0 0 5px;
+}
+
+.carousel-nav .previous {
+  border-radius: 0 5px 5px 0;
+}
+
+.carousel-nav .fas {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.featured-products .more {
+  text-align: center;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.featured-products .more .more-btn {
+  border: 3px solid #40210f;
+  border-style: dotted;
+  border-width: 2px;
+  text-align: center;
+  border-radius: 30px;
+  background: url("/images/brown-leather.png");
+  text-decoration: none;
+  color: #ffddbe;
+  padding: 10px 25px;
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+header form button {
+  border: 3px solid #40210f;
+  border-style: dotted;
+  background: url("/images/brown-leather.png");
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+header .search-icon {
+  background: none;
+  border: none;
+}
+
+header .fas {
+  color: #734021;
+  font-size: 1.3em;
 }
 
 .shopping-cart {
@@ -7375,12 +7458,20 @@ header form {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  position: absolute;
+  top: 10vh;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.253);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
 }
 
 header input[type="search"] {
   padding: 7.5px 5px;
+  margin: 0 auto;
 }
 
 .hero-background {
@@ -7426,77 +7517,77 @@ header input[type="search"] {
   width: 90%;
   margin: 0 auto;
   max-width: 1280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .reviews .row .card {
   max-width: 150px;
   max-height: 250px;
-}
-
-.hero-background a {
-  border: 3px solid #40210f;
-  border-style: dotted;
-  border-width: 2px;
-  text-align: center;
-  border-radius: 30px;
-  background: url("/images/brown-leather.png");
-  text-decoration: none;
-  color: #ffddbe;
-  padding: 10px 25px;
-  display: inline-block;
-  font-family: "corporate-a-condensed", serif;
-  width: 50vw;
-  -webkit-box-shadow: 7.5px 7.5px 15px #000;
-          box-shadow: 7.5px 7.5px 15px #000;
-}
-
-.carousel-nav .next,
-.carousel-nav .previous {
+  background-color: rgba(255, 255, 255, 0);
   border: none;
-  background-color: #a8592e;
-  opacity: 0.6;
-  padding: 10px 10px;
 }
 
-.carousel-nav .next {
-  border-radius: 5px 0 0 5px;
+.reviews .row .col {
+  margin-right: 15px;
 }
 
-.carousel-nav .previous {
-  border-radius: 0 5px 5px 0;
+.product-section .shoes {
+  width: 90%;
+  max-width: 1280px;
+  margin-top: 25px;
 }
 
-.carousel-nav .fas {
-  font-size: 1.2em;
-  color: #fff;
+.product-section .row {
+  gap: 15px;
 }
 
-.featured-products .more {
-  text-align: center;
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+.gender-category ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  padding-left: 0;
+  height: 500px;
 }
 
-.featured-products .more .more-btn {
-  border: 3px solid #40210f;
-  border-style: dotted;
-  border-width: 2px;
-  text-align: center;
-  border-radius: 30px;
-  background: url("/images/brown-leather.png");
+.gender-category ul .colour-overlay, .gender-category ul .women::before,
+.gender-category ul .men::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.gender-category ul .women {
+  display: block;
+  background: url("/images/women.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+.gender-category ul .men {
+  display: block;
+  background: url("/images/men.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+.gender-category ul a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "copperplate", serif;
+  font-weight: bold;
   text-decoration: none;
-  color: #ffddbe;
-  padding: 10px 25px;
-  display: inline-block;
-  width: 50%;
-  margin-top: 20px;
-  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-}
-
-header form button {
-  border: 3px solid #40210f;
-  border-style: dotted;
-  background: url("/images/brown-leather.png");
-  color: #fff;
+  color: #734021;
+  font-size: 3em;
+  text-shadow: 3px 3px 5px #000000b6;
 }

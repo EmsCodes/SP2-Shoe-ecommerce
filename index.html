@@ -14,8 +14,8 @@
 			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="https://use.typekit.net/wvv0hvk.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 		<title>Handmade | Home</title>
 	</head>
 	<body>
@@ -25,7 +25,7 @@
 					<a class="navbar-brand" href="index.html"
 						><img class="logo" src="/images/Logo.png" alt="Handmade logo"
 					/></a>
-					<form class="search-bar">
+					<form class="search-bar" style="display: none">
 						<label for="search"><span class="sr-only">Search</span></label>
 						<input
 							type="search"
@@ -37,7 +37,9 @@
 						<button>Search</button>
 					</form>
 					<div class="header-icons">
-						<button class="search-icon"><i class="fas fa-search"></i></button>
+						<button class="search-icon">
+							<i class="fas fa-search" alt="search icon"></i>
+						</button>
 						<a href="cart.html" aria-label="shopping cart">
 							<img
 								src="images/shopping-cart-small.png"
@@ -60,10 +62,12 @@
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">Home</a>
+								<a class="nav-link active" aria-current="page" href="index.html"
+									>Home</a
+								>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Products</a>
+								<a class="nav-link" href="products.html">Products</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">About</a>
@@ -83,7 +87,7 @@
 			</section>
 			<section class="featured-products">
 				<h3>Featured</h3>
-				<div class="carousel-inner">
+				<div class="carousel-inner container">
 					<div class="carousel"></div>
 					<nav class="carousel-nav" aria-label="carousel navigation">
 						<button class="previous hide">
@@ -116,7 +120,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col d-none">
+						<div class="col">
 							<div class="card">
 								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
 								<div class="card-body">
