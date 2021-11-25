@@ -7369,12 +7369,18 @@ footer .social-media {
 }
 
 header form {
-  -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+header input[type="search"] {
+  padding: 7.5px 5px;
 }
 
 .hero-background {
@@ -7422,8 +7428,7 @@ header form {
   max-width: 1280px;
 }
 
-.reviews .row .card-body {
-  width: 100%;
+.reviews .row .card {
   max-width: 150px;
   max-height: 250px;
 }
@@ -7487,4 +7492,11 @@ header form {
   margin-top: 20px;
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+header form button {
+  border: 3px solid #40210f;
+  border-style: dotted;
+  background: url("/images/brown-leather.png");
+  color: #fff;
 }

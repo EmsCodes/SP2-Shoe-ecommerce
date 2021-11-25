@@ -26,7 +26,7 @@
 						><img class="logo" src="/images/Logo.png" alt="Handmade logo"
 					/></a>
 					<form class="search-bar">
-						<label for="search" class="sr-only">Search</label>
+						<label for="search"><span class="sr-only">Search</span></label>
 						<input
 							type="search"
 							name="q"
@@ -36,13 +36,16 @@
 						/>
 						<button>Search</button>
 					</form>
-					<a href="cart.html" aria-label="shopping cart">
-						<img
-							src="images/shopping-cart-small.png"
-							alt="shopping cart icon"
-							class="shopping-cart"
-						/>
-					</a>
+					<div class="header-icons">
+						<button class="search-icon"><i class="fas fa-search"></i></button>
+						<a href="cart.html" aria-label="shopping cart">
+							<img
+								src="images/shopping-cart-small.png"
+								alt="shopping cart icon"
+								class="shopping-cart"
+							/>
+						</a>
+					</div>
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -95,28 +98,30 @@
 			</section>
 			<section class="reviews">
 				<h3>Customer reviews</h3>
-				<div class="row d-flex flex-row flex-nowrap">
-					<div class="col">
-						<div class="card">
-							<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
-							<div class="card-body">
-								<p class="card-title">Title</p>
+				<div class="container d-flex flex-nowrap">
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
+								<div class="card-body">
+									<p class="card-title">Title</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col">
-						<div class="card">
-							<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
-							<div class="card-body">
-								<p class="card-title">Title</p>
+						<div class="col">
+							<div class="card">
+								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
+								<div class="card-body">
+									<p class="card-title">Title</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col">
-						<div class="card">
-							<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
-							<div class="card-body">
-								<p class="card-title">Title</p>
+						<div class="col d-none">
+							<div class="card">
+								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
+								<div class="card-body">
+									<p class="card-title">Title</p>
+								</div>
 							</div>
 						</div>
 					</div>

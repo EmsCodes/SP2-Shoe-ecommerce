@@ -1,6 +1,14 @@
 header {
+	.search-bar {
+		// display: none;
+	}
 	form {
-		flex: 100%;
+		flex: 0 0 100%;
 		order: 4;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	input[type="search"] {
+		padding: 7.5px 5px;
 	}
 }

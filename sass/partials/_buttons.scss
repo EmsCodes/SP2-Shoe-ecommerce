@@ -56,3 +56,16 @@
 		}
 	}
 }
+
+// Search button
+
+header {
+	form {
+		button {
+			border: 3px solid $dark-brown;
+			border-style: dotted;
+			background: url("/images/brown-leather.png");
+			color: $white;
+		}
+	}
+}

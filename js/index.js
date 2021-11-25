@@ -60,3 +60,18 @@ previous.addEventListener("click", () => {
 	}
 	carousel.style.transform = `translateX(${-index * carouselWidth}px)`;
 });
+
+// Function to display search form onclick
+
+const searchBtn = document.querySelector(".search-icon");
+const searchBar = document.querySelector(".search-bar");
+
+function displaySearchBar() {
+	if (searchBar.style.display === "none") {
+		searchBar.style.display = "block";
+		document.querySelector("#search").focus();
+	} else {
+		searchBar.style.display = "none";
+	}
+}
+searchBtn.addEventListener("click", displaySearchBar);
