@@ -86,3 +86,12 @@ h1 {
 		font-family: $primary-heading-font;
 	}
 }
+
+// products page
+
+.product-section {
+	.card-title {
+		font-family: $secondary-heading-font;
+		font-size: 1.1em;
+	}
+}

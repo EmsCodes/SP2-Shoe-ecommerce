@@ -1,3 +1,5 @@
+// index featured products carousel
+////////////////////////////////////////////
 .featured-products {
 	width: 100%;
 	max-width: 1200px;
@@ -77,5 +79,19 @@
 	}
 	.show {
 		display: inline-block;
+	}
+}
+
+// product detail page carousel
+////////////////////////////////////////
+
+.product-detail-container {
+	.carousel-item {
+		max-height: 50vh;
+		width: 100%;
+		img {
+			max-height: 50vh;
+			width: 100%;
+		}
 	}
 }

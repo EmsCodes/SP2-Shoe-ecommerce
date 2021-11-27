@@ -1,14 +1,20 @@
 .product-section {
-	.shoes {
-		width: 90%;
+	.container {
 		max-width: 1280px;
 		margin-top: 25px;
+		margin-bottom: 25px;
 	}
 	.row {
-		gap: 15px;
+		justify-content: start;
+		width: 95%;
+		margin: 0 auto;
 	}
-	.col {
-		// width: 100%;
+	.card-img-top {
+		height: 150px;
+		object-fit: cover;
+	}
+	.card-body {
+		height: 100px;
 	}
 }
 
@@ -17,7 +23,7 @@
 		display: grid;
 		grid-template-rows: 1fr 1fr;
 		padding-left: 0;
-		height: 500px;
+		height: 350px;
 
 		.colour-overlay {
 			content: "";
@@ -26,7 +32,7 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
-			background: rgba(255, 255, 255, 0.25);
+			background-color: #00000065;
 		}
 		.women::before,
 		.men::before {
@@ -53,9 +59,9 @@
 			transform: translateX(-50%);
 			font-family: $primary-heading-font;
 			font-weight: bold;
-			text-decoration: none;
-			color: $secondary-brown;
-			font-size: 3em;
+			text-decoration: underline;
+			color: $light-beige;
+			font-size: 2em;
 			text-shadow: 3px 3px 5px #000000b6;
 		}
 	}
