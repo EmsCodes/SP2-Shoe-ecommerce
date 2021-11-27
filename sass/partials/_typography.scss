@@ -93,5 +93,16 @@ h1 {
 	.card-title {
 		font-family: $secondary-heading-font;
 		font-size: 1.1em;
+		text-align: center;
+		flex-grow: 1;
+	}
+	.brand-name {
+		text-align: center;
+		margin-bottom: 0;
+		font-family: $primary-heading-font;
+	}
+	a {
+		text-decoration: none;
+		color: $primary-brown;
 	}
 }

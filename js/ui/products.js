@@ -8,7 +8,7 @@ export default function createProducts(products, container) {
 
 		const productImg = url + img;
 
-		console.log(productImg);
+		console.log(products[i].price);
 
 		elementContainer.innerHTML += `
     <div class="col-6 col-sm-4 col-lg-3">
@@ -20,7 +20,12 @@ export default function createProducts(products, container) {
           alt="${products[i].image.alternativeText}"
         />
         <div class="card-body">
+          <p class="brand-name">Brand</p>
           <h2 class="card-title">${products[i].title}</h2>
+          <div class="price-flex-container">
+            <div><p class="price"><span class="sr-only">Price:</span>$${products[i].price}</></div>
+            <div class="bag-icon"><i class="fas fa-shopping-bag"></i></div>
+          </div>
         </div>
       </div>
       </a>
