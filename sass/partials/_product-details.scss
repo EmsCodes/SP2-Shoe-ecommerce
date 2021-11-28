@@ -1,0 +1,29 @@
+.product-detail-container {
+	.text-bg {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background: $light-beige;
+			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+		}
+	}
+	.details-text {
+		width: 85%;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+
+		.price-flex-container {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-top: 35px;
+			align-content: center;
+		}
+	}
+}

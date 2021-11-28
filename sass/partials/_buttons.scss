@@ -1,14 +1,14 @@
 @mixin button-style {
-	border: 3px solid $dark-brown;
-	border-style: dotted;
+	border: 3px dotted $dark-brown;
 	border-width: 2px;
 	text-align: center;
 	border-radius: 30px;
 	background: url("/images/brown-leather.png");
 	text-decoration: none;
-	color: $light-beige;
-	padding: 10px 25px;
+	color: $white;
+	// padding: 5px 15px;
 	display: inline-block;
+	font-family: $secondary-heading-font;
 }
 
 .hero-background {
@@ -76,5 +76,21 @@ header {
 	.fas {
 		color: $secondary-brown;
 		font-size: 1.3em;
+	}
+}
+
+// buy button
+
+.product-detail-container {
+	.buy-btn {
+		@include button-style;
+		transform: translateY(-15%);
+		font-size: 1em;
+		text-transform: uppercase;
+		width: 150px;
+
+		.fa-cart-plus {
+			margin-left: 5px;
+		}
 	}
 }

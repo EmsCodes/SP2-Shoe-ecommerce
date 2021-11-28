@@ -7098,7 +7098,7 @@ fieldset:disabled .btn {
 
 body {
   font-family: "corporate-a", serif;
-  color: #303030;
+  color: #404040;
 }
 
 .logo {
@@ -7109,6 +7109,10 @@ body {
 h1, .h1 {
   font-family: "copperplate", serif;
   font-weight: 500;
+}
+
+.price {
+  font-family: "corporate-a-condensed", serif;
 }
 
 .hero-text {
@@ -7157,12 +7161,11 @@ h1, .h1 {
 
 .featured-products .price {
   font-size: 0.9em;
-  font-family: "corporate-a-condensed", serif;
   text-align: right;
 }
 
 .featured-products .fas {
-  color: #303030;
+  color: #404040;
   font-size: 0.9em;
 }
 
@@ -7202,6 +7205,45 @@ h1, .h1 {
   color: #a8592e;
 }
 
+.product-detail-container .details-text {
+  max-width: 60ch;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.product-detail-container .details-text .detail-brand-name,
+.product-detail-container .details-text .price,
+.product-detail-container .details-text h1,
+.product-detail-container .details-text .h1 {
+  color: #6f310d;
+}
+
+
+.product-detail-container .details-text h1,
+.product-detail-container .details-text .h1 {
+  font-family: "corporate-a-condensed", serif;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.product-detail-container .details-text .detail-brand-name {
+  font-family: "copperplate", serif;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
+.product-detail-container .details-text .price {
+  font-size: 1.3em;
+  border: 3px dotted #40210f;
+  border-width: 2px;
+  padding: 5px 10px;
+}
+
+.product-detail-container .details-text .product-description {
+  line-height: 150%;
+  font-weight: 100;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7233,16 +7275,15 @@ footer .social-media {
 }
 
 .hero-background a {
-  border: 3px solid #40210f;
-  border-style: dotted;
+  border: 3px dotted #40210f;
   border-width: 2px;
   text-align: center;
   border-radius: 30px;
   background: url("/images/brown-leather.png");
   text-decoration: none;
-  color: #ffddbe;
-  padding: 10px 25px;
+  color: #fff;
   display: inline-block;
+  font-family: "corporate-a-condensed", serif;
   font-family: "corporate-a-condensed", serif;
   width: 50vw;
   -webkit-box-shadow: 7.5px 7.5px 15px #000;
@@ -7277,16 +7318,15 @@ footer .social-media {
 }
 
 .featured-products .more .more-btn {
-  border: 3px solid #40210f;
-  border-style: dotted;
+  border: 3px dotted #40210f;
   border-width: 2px;
   text-align: center;
   border-radius: 30px;
   background: url("/images/brown-leather.png");
   text-decoration: none;
-  color: #ffddbe;
-  padding: 10px 25px;
+  color: #fff;
   display: inline-block;
+  font-family: "corporate-a-condensed", serif;
   width: 50%;
   margin-top: 20px;
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
@@ -7309,6 +7349,27 @@ header .search-icon {
 header .fas {
   color: #734021;
   font-size: 1.3em;
+}
+
+.product-detail-container .buy-btn {
+  border: 3px dotted #40210f;
+  border-width: 2px;
+  text-align: center;
+  border-radius: 30px;
+  background: url("/images/brown-leather.png");
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-family: "corporate-a-condensed", serif;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 150px;
+}
+
+.product-detail-container .buy-btn .fa-cart-plus {
+  margin-left: 5px;
 }
 
 .shopping-cart {
@@ -7745,4 +7806,41 @@ header input[type="search"] {
     font-size: 2em;
     text-shadow: 3px 3px 5px #000000b6;
   }
+}
+
+.product-detail-container .text-bg {
+  position: relative;
+}
+
+.product-detail-container .text-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #ffddbe;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.product-detail-container .details-text {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.product-detail-container .details-text .price-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 35px;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
