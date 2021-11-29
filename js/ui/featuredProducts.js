@@ -7,8 +7,6 @@ export default function featuredProducts(products, carouselContainer) {
 
 	for (let i = 0; i < products.length; i++) {
 		if (products[i].featured) {
-			console.log(products[i]);
-
 			const img = products[i].image.url;
 
 			const featuredImg = url + img;

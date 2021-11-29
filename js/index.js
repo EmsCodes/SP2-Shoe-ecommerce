@@ -44,15 +44,12 @@ let carouselWidth = document.querySelector(".featured-products").offsetWidth;
 // 	carouselWidth = document.querySelector(".featured-products").offsetWidth;
 // });
 
-console.log(carouselWidth);
-
 let index = 0;
 
 next.addEventListener("click", () => {
 	index++;
 	previous.classList.add("show");
 	carousel.style.transform = `translateX(${-index * carouselWidth}px)`;
-	console.log(index);
 
 	if (carousel.offsetWidth - index * carouselWidth < carouselWidth) {
 		next.classList.add("hide");

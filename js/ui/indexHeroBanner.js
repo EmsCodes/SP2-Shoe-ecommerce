@@ -7,7 +7,5 @@ export default function heroBanner(img, container) {
 
 	const image = url + heroImg;
 
-	console.log(image);
-
 	imgContainer.style.backgroundImage = `url(${image})`;
 }

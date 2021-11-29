@@ -37,7 +37,7 @@
 						<button>Search</button>
 					</form>
 					<div class="header-icons">
-						<button class="search-icon" aria-label="search form button">
+						<button class="search-icon">
 							<i class="fas fa-search" alt="search icon"></i>
 						</button>
 						<a href="cart.html" aria-label="shopping cart">
@@ -78,81 +78,17 @@
 			</nav>
 		</header>
 		<main>
-			<section class="hero-background">
-				<div class="hero-text">
-					<h1>Handmade</h1>
-					<p>Quality shoes for men and women, made to last</p>
-					<a href="products.html">Shop</a>
-				</div>
+			<section class="shopping-cart">
+				<h1>Shopping cart</h1>
+				<ul class="shopping-list">
+					<div class="loader"></div>
+					<!-- <li class="shopping-item">
+            <div class="cart-item">
+              <div class="loader"></div>
+            </div>
+          </li> -->
+				</ul>
 			</section>
-			<section class="featured-products">
-				<h3>Featured</h3>
-				<div class="carousel-inner container">
-					<div class="carousel"></div>
-					<nav class="carousel-nav" aria-label="carousel navigation">
-						<button class="previous hide">
-							<i class="fas fa-chevron-left"></i>
-						</button>
-						<button class="next"><i class="fas fa-chevron-right"></i></button>
-					</nav>
-				</div>
-				<div class="more">
-					<a class="more-btn" href="products.html">More products</a>
-				</div>
-			</section>
-			<section class="reviews">
-				<h3>Customer reviews</h3>
-				<div class="container d-flex flex-nowrap">
-					<div class="row">
-						<div class="col">
-							<div class="card">
-								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
-								<div class="card-body">
-									<p class="card-title">Title</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
-								<div class="card-body">
-									<p class="card-title">Title</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<img src="/images/green-shoe.jpg" class="card-img-top" alt="" />
-								<div class="card-body">
-									<p class="card-title">Title</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="newsletter">
-				<div class="newsletter__form">
-					<h3>Subscribe to Newsletter</h3>
-					<ul>
-						<li>News</li>
-						<li>Deals</li>
-						<li>Special offers</li>
-					</ul>
-					<form action="" method="post">
-						<label for="email"
-							><span class="sr-only">Enter your email</span>
-						</label>
-						<input type="email" name="Email" id="email" placeholder="Email*" />
-						<input type="submit" value="Submit" />
-					</form>
-				</div>
-				<div class="newsletter__img">
-					<div class="news-img">News</div>
-					<div class="sale-img">Sale</div>
-					<div class="vip-img">VIP</div>
-				</div>
-			</div>
 		</main>
 		<footer>
 			<div class="wrapper">
@@ -189,6 +125,6 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/index.js" type="module"></script>
+		<script src="js/cart.js" type="module"></script>
 	</body>
 </html>

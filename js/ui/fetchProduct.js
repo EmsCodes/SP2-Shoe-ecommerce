@@ -1,4 +1,5 @@
 import { url } from "../data/api.js";
+import { addToCart } from "../components/functions.js";
 
 export function fetchProductDetails(data, container) {
 	const detailsContainer = document.querySelector(container);
@@ -6,6 +7,10 @@ export function fetchProductDetails(data, container) {
 	const breadCrumbProductTitle = document.querySelector(".product-title");
 
 	const productImg = url + data.image.url;
+
+	const title = data.title;
+	const id = data.id;
+	const price = data.price;
 
 	breadCrumbProductTitle.innerHTML = `${data.title}`;
 
@@ -63,13 +68,17 @@ export function fetchProductDetails(data, container) {
     <div class="text-bg">
       <div class="details-text">
         <p class="detail-brand-name">Brand</p>
-        <h1>${data.title}</h1>
+        <h1>${title}</h1>
         <p class="product-description">${data.description}</p>
         <div class="price-flex-container">
-          <p class="price"><span class="sr-only">Price:</span>$${data.price}</p>
-          <button class="buy-btn">Buy<i class="fas fa-cart-plus"></i></button>
+          <p class="price"><span class="sr-only">Price:</span>$${price}</p>
+          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}">Buy<i class="fas fa-cart-plus"></i></button>
         </div>
       </div>
     </div>
   </div>`;
+
+	const buyBtn = document.querySelector(".buy-btn");
+
+	buyBtn.addEventListener("click", addToCart);
 }
