@@ -8,8 +8,6 @@ export default function createProducts(products, container) {
 
 		const productImg = url + img;
 
-		console.log(products[i].price);
-
 		elementContainer.innerHTML += `
     <div class="col-6 col-sm-4 col-lg-3">
       <a href="product-page.html?id=${products[i].id}">

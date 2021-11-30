@@ -8,6 +8,10 @@ function getCart(cartItems) {
 
 	cartList.innerHTML = "";
 
+	if (cart.length === 0) {
+		cartList.innerHTML = "Cart Empty!";
+	}
+
 	cartItems.forEach((item) => {
 		const price = parseInt(item.productPrice);
 
@@ -31,10 +35,6 @@ function getCart(cartItems) {
       <button class="remove-btn" data-id="${itemId}"><i class="fas fa-times" data-id="${itemId}"></i></button>
     </li>`;
 
-		if ((item = 0)) {
-			cartList.innerHTML += "Empty cart!";
-		}
-
 		const removeBtn = document.querySelectorAll(".remove-btn");
 
 		removeBtn.forEach((btn) => {
@@ -51,16 +51,17 @@ function removeItem(event) {
 	const currentCart = getFromStorage("cart");
 
 	let newCart = currentCart.filter(function (product) {
-		console.log(product);
-
 		if (product.productId !== id) {
 			return true;
 		}
 	});
-	console.log(newCart);
 
 	getCart(newCart);
 	saveToStorage("cart", newCart);
+
+	if (newCart.length === 0) {
+		cartList.innerHTML = "Cart Empty!";
+	}
 }
 
 getCart(cart);
