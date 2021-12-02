@@ -3,9 +3,9 @@
 	padding-top: 25px;
 	padding-bottom: 25px;
 	.row {
-		width: 90%;
+		width: 100%;
 		margin: 0 auto;
-		max-width: 1280px;
+		max-width: 750px;
 		box-sizing: border-box;
 
 		.card {
@@ -15,7 +15,7 @@
 			border: none;
 		}
 		.col {
-			margin-right: 15px;
+			// margin-right: 15px;
 		}
 	}
 }

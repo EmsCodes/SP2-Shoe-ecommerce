@@ -11,12 +11,6 @@ const password = document.querySelector("#password");
 const usernameError = document.querySelector("#username-error");
 const passwordError = document.querySelector("#password-error");
 
-const token = getToken();
-
-if (!token) {
-	window.location.href = "index.html";
-}
-
 loginForm.addEventListener("submit", submitForm);
 
 function submitForm(event) {

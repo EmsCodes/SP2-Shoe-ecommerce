@@ -6,15 +6,20 @@ import { displayMessage } from "./components/displayMessage.js";
 adminMenu();
 logOut();
 
+const token = getToken();
+
+if (!token) {
+	window.location.href = "index.html";
+}
 const addForm = document.querySelector(".add-form");
-// const message = document.querySelector(".message-container");
+const message = document.querySelector(".message-container");
 const productTitle = document.querySelector("#title");
 const productDescription = document.querySelector("#description");
 const productPrice = document.querySelector("#price");
 const productImg = document.querySelector("#product-img");
 const featuredCheckbox = document.querySelector("#featured-checkbox");
 
-console.log(featuredCheckbox);
+console.log(productImg);
 
 addForm.addEventListener("submit", submitAddForm);
 
@@ -26,6 +31,8 @@ function submitAddForm(event) {
 	const priceValue = parseFloat(productPrice.value);
 	const imgValue = productImg.value;
 	const featuredProduct = featuredCheckbox.checked;
+
+	console.log(imgValue);
 
 	if (
 		titleValue.length === 0 ||
@@ -59,10 +66,6 @@ async function addProduct(title, description, price, image, featured) {
 		featured,
 	});
 
-	const token = getToken();
-
-	console.log(token);
-
 	const options = {
 		method: "POST",
 		body: data,
@@ -82,6 +85,9 @@ async function addProduct(title, description, price, image, featured) {
 
 		featured = result.featured;
 
+		if (result.created_at) {
+			displayMessage("success", "Product created!", message);
+		}
 		console.log(result);
 	} catch (error) {
 		console.log(error);

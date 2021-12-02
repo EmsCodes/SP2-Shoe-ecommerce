@@ -17,7 +17,7 @@ export default function featuredProducts(products, carouselContainer) {
             <img class="card-img-top" src="${featuredImg}" alt="${products[i].image.alternativeText}">
             <div class="card-body">
               <p class="product-brand">Brand</p>
-              <h4 class="card-title">${products[i].title}</h4>
+              <h3 class="card-title">${products[i].title}</h3>
               <p class="price"><span class="sr-only">Price:</span>$${products[i].price}</p>
               </div>
           </div>

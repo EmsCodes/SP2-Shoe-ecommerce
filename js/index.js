@@ -52,7 +52,7 @@ let carouselWidth = document.querySelector(".featured-products").offsetWidth;
 let index = 0;
 
 next.addEventListener("click", () => {
-	index = index + 0.8;
+	index++;
 	previous.classList.add("show");
 	carousel.style.transform = `translateX(${-index * carouselWidth}px)`;
 
@@ -62,7 +62,7 @@ next.addEventListener("click", () => {
 });
 
 previous.addEventListener("click", () => {
-	index = index - 0.8;
+	index--;
 	next.classList.remove("hide");
 	if (index === 0) {
 		previous.classList.remove("show");

@@ -12,8 +12,9 @@
 		padding-top: 25px;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		min-height: 150px;
+		min-height: 125px;
 		margin-bottom: 0px;
+		flex-wrap: nowrap;
 
 		.news-img {
 			background-image: url("/images/green-shoe.jpg");
