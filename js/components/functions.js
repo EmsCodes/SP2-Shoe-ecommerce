@@ -1,5 +1,3 @@
-// import { url } from "../data/api.js";
-
 import { saveToStorage, getFromStorage } from "../components/storage.js";
 
 export function addToCart() {

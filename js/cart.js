@@ -1,6 +1,6 @@
 import { getFromStorage, saveToStorage } from "./components/storage.js";
 
-let cart = getFromStorage("cart");
+const cart = getFromStorage("cart");
 const cartList = document.querySelector(".shopping-list");
 
 function getCart(cartItems) {
@@ -20,10 +20,14 @@ function getCart(cartItems) {
 		totalPrice += price;
 
 		cartList.innerHTML += `<li class="cart-item"> 
-      <img src="${item.productImage}" class="product-img">
+      <a href="product-page.html?id=${itemId}"class="product-link">
+        <img src="${item.productImage}" class="product-img">
+      </a>
       <div>
         <p class="productBrand">Brand</p>
-        <h3>${item.productTitle}</h3>
+        <a href="product-page.html?id=${itemId}"class="product-link">
+          <h3>${item.productTitle}</h3>
+        </a>
         <p>Size: 10</p>
         <p>Colour: Brown</p>
       </div>
@@ -45,8 +49,8 @@ function getCart(cartItems) {
 	// console.log(totalPrice);
 }
 
-function removeItem(event) {
-	const id = event.target.dataset.id;
+function removeItem() {
+	const id = this.dataset.id;
 
 	const currentCart = getFromStorage("cart");
 

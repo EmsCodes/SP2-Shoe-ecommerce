@@ -6,8 +6,9 @@
 	background: url("/images/brown-leather.png");
 	text-decoration: none;
 	color: $white;
-	// padding: 5px 15px;
-	display: inline-block;
+	padding: 5px 15px;
+	display: block;
+	margin: 0 auto;
 	font-family: $secondary-heading-font;
 }
 
@@ -50,7 +51,7 @@
 
 		.more-btn {
 			@include button-style;
-			width: 50%;
+			width: 50vw;
 			margin-top: 20px;
 			box-shadow: $box-shadow;
 		}
@@ -93,4 +94,10 @@ header {
 			margin-left: 5px;
 		}
 	}
+}
+
+// log-out button
+
+.log-out-btn {
+	display: none;
 }

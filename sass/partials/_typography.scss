@@ -44,6 +44,11 @@ h1 {
 // featured carousel
 
 .featured-products {
+	a {
+		text-decoration: none;
+		color: $text-colour;
+		font-size: 1.2em;
+	}
 	h3 {
 		font-family: $primary-heading-font;
 	}
@@ -58,9 +63,14 @@ h1 {
 		font-size: 1em;
 		text-align: center;
 	}
-	.price {
-		font-size: 0.9em;
-		text-align: right;
+
+	p {
+		padding: 0;
+		.price {
+			font-size: 0.9em;
+			text-align: center;
+			padding-bottom: 2px;
+		}
 	}
 	.fas {
 		color: $text-colour;

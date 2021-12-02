@@ -3,6 +3,11 @@ import heroBanner from "./ui/indexHeroBanner.js";
 import featuredProducts from "./ui/featuredProducts.js";
 import { displaySearchBar } from "./components/search.js";
 
+import { adminMenu, logOut } from "./components/adminMenu.js";
+
+adminMenu();
+logOut();
+
 // display searchbar function for mobile and tablet
 const searchBtn = document.querySelector(".search-icon");
 searchBtn.addEventListener("click", displaySearchBar);
@@ -47,7 +52,7 @@ let carouselWidth = document.querySelector(".featured-products").offsetWidth;
 let index = 0;
 
 next.addEventListener("click", () => {
-	index++;
+	index = index + 0.8;
 	previous.classList.add("show");
 	carousel.style.transform = `translateX(${-index * carouselWidth}px)`;
 
@@ -57,7 +62,7 @@ next.addEventListener("click", () => {
 });
 
 previous.addEventListener("click", () => {
-	index--;
+	index = index - 0.8;
 	next.classList.remove("hide");
 	if (index === 0) {
 		previous.classList.remove("show");

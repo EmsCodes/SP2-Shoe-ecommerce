@@ -20,3 +20,16 @@ header {
 		margin: 0 auto;
 	}
 }
+
+// add product form
+
+.add-product {
+	form {
+		width: 90%;
+		margin: 0 auto;
+	}
+	label,
+	input {
+		display: block;
+	}
+}
