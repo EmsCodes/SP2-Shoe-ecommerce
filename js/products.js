@@ -2,6 +2,10 @@ import { displaySearchBar } from "./components/search.js";
 import { url } from "./data/api.js";
 import createProducts from "./ui/products.js";
 import { productContainer } from "./data/variables.js";
+import { adminMenu, logOut } from "./components/adminMenu.js";
+
+adminMenu();
+logOut();
 
 // display searchbar function for mobile and tablet
 const searchBtn = document.querySelector(".search-icon");

@@ -45,9 +45,9 @@ const next = document.querySelector(".next");
 
 let carouselWidth = document.querySelector(".featured-products").offsetWidth;
 
-// window.addEventListener("resize", () => {
-// 	carouselWidth = document.querySelector(".featured-products").offsetWidth;
-// });
+window.addEventListener("resize", () => {
+	carouselWidth = document.querySelector(".featured-products").offsetWidth;
+});
 
 let index = 0;
 

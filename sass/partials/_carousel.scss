@@ -69,12 +69,27 @@
 			}
 			.card-body {
 				height: 40%;
-				padding: 10px !important;
+				position: relative;
 			}
 			.price {
-				padding-bottom: 10px;
+				padding: 5px;
 				border: $price-border;
-				width: 35%;
+				// display: inline;
+				// margin-top: 25px;
+				// margin-bottom: 0;
+				// position: absolute;
+				// bottom: 10px;
+				// right: 7.5%;
+			}
+			.price-flex-container {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+			}
+			.fa-shopping-bag {
+				transform: translateY(25%);
+				font-size: 1em;
+				color: $primary-brown;
 			}
 		}
 	}

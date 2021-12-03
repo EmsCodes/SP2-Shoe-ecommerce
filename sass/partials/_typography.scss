@@ -29,15 +29,19 @@ h1 {
 	}
 	h1,
 	p {
-		color: $light-beige;
+		color: $beige-text;
+		max-width: 300px;
+		margin: 0 auto;
 	}
 	h1 {
 		padding-top: 50px;
 		font-size: 2.5em;
+		border-bottom: 1px dashed $beige-text;
 	}
 	p {
 		padding-bottom: 20px;
-		font-size: 1.5em;
+		margin-top: 10px;
+		font-size: 1.2em;
 	}
 }
 
@@ -70,9 +74,8 @@ h1 {
 	p {
 		padding: 0;
 		.price {
-			font-size: 0.9em;
+			font-size: 1em;
 			text-align: center;
-			padding-bottom: 2px;
 		}
 	}
 	.fas {
@@ -102,6 +105,8 @@ h1 {
 		font-family: $primary-heading-font;
 	}
 }
+
+// Breadcrumb navigation
 
 // products page
 
@@ -158,6 +163,47 @@ h1 {
 		.product-description {
 			line-height: 150%;
 			font-weight: 100;
+		}
+	}
+}
+
+// MEDIA QUERIES
+//////////////////////////////////
+
+@media (min-width: 700px) {
+	// index hero-section
+	.hero-text {
+		a {
+			font-size: 1.2em;
+		}
+		h1 {
+			padding-top: 75px;
+			font-size: 3em;
+		}
+		p {
+			padding-bottom: 20px;
+			font-size: 1.5em;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	// index hero-section
+	.hero-text {
+		a {
+			font-size: 1.4em;
+		}
+		h1,
+		p {
+			max-width: 400px;
+		}
+		h1 {
+			padding-top: 75px;
+			font-size: 4em;
+		}
+		p {
+			padding-bottom: 20px;
+			font-size: 2em;
 		}
 	}
 }

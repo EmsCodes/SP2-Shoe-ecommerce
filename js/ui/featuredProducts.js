@@ -6,6 +6,9 @@ export default function featuredProducts(products, carouselContainer) {
 	container.innerHTML = "";
 
 	for (let i = 0; i < products.length; i++) {
+		if (products[i].featured.length === 5) {
+			break;
+		}
 		if (products[i].featured) {
 			const img = products[i].image.url;
 
@@ -18,7 +21,10 @@ export default function featuredProducts(products, carouselContainer) {
             <div class="card-body">
               <p class="product-brand">Brand</p>
               <h3 class="card-title">${products[i].title}</h3>
-              <p class="price"><span class="sr-only">Price:</span>$${products[i].price}</p>
+              <div class="price-flex-container">
+                <p class="price"><span class="sr-only">Price:</span>$${products[i].price}</p>
+                <div class="bag-icon"><i class="fas fa-shopping-bag"></i></div>
+              </div>
               </div>
           </div>
       </a>

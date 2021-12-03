@@ -23,8 +23,26 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	// background: url("/images/beige-leather.png");
-	background: $secondary-brown;
+	background: url("/images/brown-leather.png");
 	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 	opacity: 50%;
+}
+
+@media (min-width: 700px) {
+	.hero-background {
+		height: 350px;
+		background-position: center;
+	}
+}
+
+@media (min-width: 1000px) {
+	.hero-background {
+		height: 400px;
+		background-position: bottom;
+	}
+}
+@media (min-width: 1400px) {
+	.hero-background {
+		height: 425px;
+	}
 }

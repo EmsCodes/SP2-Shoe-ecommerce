@@ -4,3 +4,12 @@
 	width: 35px;
 	height: auto;
 }
+
+.rating {
+	display: flex;
+
+	.fa-star {
+		font-size: 0.7em;
+		margin-right: 2px;
+	}
+}
