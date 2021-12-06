@@ -16,6 +16,8 @@ export function logOut() {
 		localStorage.removeItem("token");
 
 		location.href = "index.html";
-		logOutBtn.style.display = "none";
+		if (!userName) {
+			logOutBtn.style.display = "none";
+		}
 	};
 }

@@ -5,7 +5,7 @@
 	border-radius: 30px;
 	background: url("/images/brown-leather.png");
 	text-decoration: none;
-	color: $light-beige;
+	color: $beige-text;
 	padding: 12px;
 	display: block;
 	margin: 0 auto;
@@ -67,7 +67,7 @@ header {
 			border: 3px solid $dark-brown;
 			border-style: dotted;
 			background: url("/images/brown-leather.png");
-			color: $white;
+			color: $beige-text;
 			border-radius: 0 5px 5px 0;
 		}
 	}
@@ -101,4 +101,17 @@ header {
 
 .log-out-btn {
 	display: none;
+	font-size: 1.2em;
+	border: 3px dotted $dark-brown;
+	border-width: 2px;
+	text-align: center;
+	border-radius: 5px;
+	background: url("/images/brown-leather.png");
+	text-decoration: none;
+	color: $beige-text;
+	padding: 7.5px;
+	display: block;
+	font-family: $secondary-heading-font;
+	font-weight: 100;
+	margin-bottom: 20px;
 }

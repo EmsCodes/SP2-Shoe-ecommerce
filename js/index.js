@@ -2,9 +2,11 @@ import { url } from "./data/api.js";
 import heroBanner from "./ui/indexHeroBanner.js";
 import featuredProducts from "./ui/featuredProducts.js";
 import { displaySearchBar } from "./components/search.js";
+import { cartCounter } from "./components/functions.js";
 
 import { adminMenu, logOut } from "./components/adminMenu.js";
 
+cartCounter();
 adminMenu();
 logOut();
 

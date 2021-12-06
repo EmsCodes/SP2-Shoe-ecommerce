@@ -61,7 +61,7 @@ h1 {
 	}
 	.product-brand {
 		font-family: $primary-heading-font;
-		font-size: 1em;
+		font-size: 0.9em;
 		margin-bottom: 0;
 		text-align: center;
 	}
@@ -72,6 +72,7 @@ h1 {
 	}
 
 	p {
+		font-weight: 600;
 		padding: 0;
 		.price {
 			font-size: 1em;

@@ -6,18 +6,17 @@ export default function featuredProducts(products, carouselContainer) {
 	container.innerHTML = "";
 
 	for (let i = 0; i < products.length; i++) {
-		if (products[i].featured.length === 5) {
-			break;
-		}
-		if (products[i].featured) {
-			const img = products[i].image.url;
+		console.log(products[i].image_url);
 
-			const featuredImg = url + img;
+		if (products[i].featured) {
+			const img = products[i].image_url;
+
+			// const featuredImg = url + img;
 
 			container.innerHTML += `<div class="card-container">
       <a href="products.html">
           <div class="card">
-            <img class="card-img-top" src="${featuredImg}" alt="${products[i].image.alternativeText}">
+            <img class="card-img-top" src="${img}" >
             <div class="card-body">
               <p class="product-brand">Brand</p>
               <h3 class="card-title">${products[i].title}</h3>

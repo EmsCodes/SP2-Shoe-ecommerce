@@ -14,3 +14,31 @@
 // 		// order: 3;
 // 	}
 // }
+
+header {
+	.navbar-light .navbar-toggler {
+		color: white;
+	}
+	.navbar-nav {
+		margin-bottom: 10px;
+		li {
+			font-family: $secondary-heading-font;
+			font-size: 1.3em;
+		}
+	}
+	.fa-shopping-cart {
+		position: relative;
+	}
+	.cart-counter {
+		position: absolute;
+		width: 17.5px;
+		height: 20px;
+		border-radius: 50%;
+		background-color: $green;
+		bottom: 30%;
+		left: 80%;
+		color: $white;
+		text-align: center;
+		font-size: 0.8em;
+	}
+}
