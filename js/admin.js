@@ -22,45 +22,6 @@ const addFeaturedCheckbox = document.querySelector("#featured-checkbox");
 
 addForm.addEventListener("submit", submitAddForm);
 
-// addProductImg.addEventListener("change", (event) => {
-// 	let fileList = event.target.files[0];
-// 	let file = document.querySelector("input[type=file]").files[0];
-
-//   console.log(fileList);
-
-// 	addProductImg = fileList;
-// });
-
-// function findImage() {
-// 	const reader = new FileReader();
-// 	let file = document.querySelector("input[type=file]").files[0];
-// 	// const formData = new FormData();
-// 	// const preview = document.querySelector(".preview");
-
-// 	// console.log(formData);
-
-// 	// addProductImg = formData;
-// 	reader.addEventListener(
-// 		"load",
-// 		function () {
-// 			// convert image file to base64 string
-// 			file = reader.result;
-// 			addProductImg = file;
-
-// 			// formData.append("files", file);
-// 			// formData.append("ref", "products");
-// 			// console.log(file);
-// 			// console.log(addProductImg);
-// 		},
-// 		false
-// 	);
-// 	// if (file) {
-// 	// 	reader.readAsDataURL(file);
-// 	// }
-// }
-
-// findImage();
-
 function submitAddForm(event) {
 	event.preventDefault();
 
@@ -120,9 +81,10 @@ async function addProduct(title, description, price, featured, image_url) {
 
 		if (result.created_at) {
 			displayMessage("success", "Product created!", message);
+			addForm.reset();
 		}
 		console.log(result);
 	} catch (error) {
-		console.log(error);
+		// console.log(error);
 	}
 }

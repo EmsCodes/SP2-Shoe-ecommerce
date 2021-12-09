@@ -6,9 +6,10 @@ import { cartCounter } from "./components/functions.js";
 
 import { adminMenu, logOut } from "./components/adminMenu.js";
 
-cartCounter();
 adminMenu();
 logOut();
+
+cartCounter();
 
 // display searchbar function for mobile and tablet
 const searchBtn = document.querySelector(".search-icon");

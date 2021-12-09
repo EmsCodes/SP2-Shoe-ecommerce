@@ -6,11 +6,12 @@ export default function featuredProducts(products, carouselContainer) {
 	container.innerHTML = "";
 
 	for (let i = 0; i < products.length; i++) {
-		console.log(products[i].image_url);
-
-		if (products[i].featured) {
+		if (products[i].featured === true) {
 			const img = products[i].image_url;
 
+			if (products[i].featured >= 2) {
+				break;
+			}
 			// const featuredImg = url + img;
 
 			container.innerHTML += `<div class="card-container">

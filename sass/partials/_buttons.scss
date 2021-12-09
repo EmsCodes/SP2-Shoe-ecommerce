@@ -100,18 +100,20 @@ header {
 // log-out button
 
 .log-out-btn {
+	width: 90%;
+	max-width: 250px;
+	margin: 0 auto;
 	display: none;
 	font-size: 1.2em;
-	border: 3px dotted $dark-brown;
-	border-width: 2px;
-	text-align: center;
-	border-radius: 5px;
-	background: url("/images/brown-leather.png");
+	border: 1px dotted $secondary-brown;
 	text-decoration: none;
-	color: $beige-text;
+	color: $secondary-brown;
+	background: none;
 	padding: 7.5px;
 	display: block;
 	font-family: $secondary-heading-font;
 	font-weight: 100;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	margin-top: 35px;
+	box-shadow: $box-shadow;
 }

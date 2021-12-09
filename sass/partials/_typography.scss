@@ -172,6 +172,10 @@ h1 {
 //////////////////////////////////
 
 @media (min-width: 700px) {
+	//  header
+	.logo {
+		width: 75px;
+	}
 	// index hero-section
 	.hero-text {
 		a {
@@ -189,6 +193,10 @@ h1 {
 }
 
 @media (min-width: 1200px) {
+	//  header
+	.logo {
+		width: 125px;
+	}
 	// index hero-section
 	.hero-text {
 		a {
