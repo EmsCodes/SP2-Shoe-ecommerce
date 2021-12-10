@@ -4,29 +4,35 @@
 	padding-top: 25px;
 
 	.newsletter__form {
-		width: 90%;
-		margin: 0 auto;
+		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 25px;
+		background-color: $orange-beige;
 	}
 
 	.newsletter__img {
-		padding-top: 25px;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		min-height: 125px;
+		min-height: 150px;
 		margin-bottom: 0px;
+
+		.news-img,
+		.sale-img,
+		.vip-img {
+			background-size: cover;
+			position: relative;
+		}
 
 		.news-img {
 			background-image: url("/images/green-shoe.jpg");
-			background-size: cover;
 			background-position: bottom;
 		}
 		.sale-img {
 			background-image: url("/images/sale-img.jpg");
-			background-size: cover;
 		}
 		.vip-img {
 			background-image: url("/images/special-offer.jpg");
-			background-size: cover;
 		}
 	}
 }

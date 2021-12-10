@@ -14,7 +14,6 @@ cartCounter();
 // display searchbar function for mobile and tablet
 const searchBtn = document.querySelector(".search-icon");
 searchBtn.addEventListener("click", displaySearchBar);
-
 searchBtn.addEventListener("onkeyup", displaySearchBar);
 
 const heroContainer = ".hero-background";

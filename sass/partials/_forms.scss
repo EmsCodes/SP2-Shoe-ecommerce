@@ -1,7 +1,7 @@
 header {
-	// .search-bar {
-	// 	display: none;
-	// }
+	.search-bar {
+		display: none;
+	}
 	form {
 		flex: 0 0 100%;
 		order: 4;
@@ -32,5 +32,26 @@ header {
 	label,
 	input {
 		display: block;
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		.search-bar {
+			display: block;
+		}
+		form {
+			flex: none;
+			position: static;
+			background-color: none;
+			padding-top: 0;
+			padding-bottom: 0;
+			border-radius: 5px;
+			background-color: none;
+		}
+		input[type="search"] {
+			padding: 7.5px 5px;
+			margin: 0 auto;
+		}
 	}
 }

@@ -9,15 +9,12 @@ export default function featuredProducts(products, carouselContainer) {
 		if (products[i].featured === true) {
 			const img = products[i].image_url;
 
-			if (products[i].featured >= 2) {
-				break;
-			}
-			// const featuredImg = url + img;
+			console.log(img);
 
 			container.innerHTML += `<div class="card-container">
       <a href="products.html">
           <div class="card">
-            <img class="card-img-top" src="${img}" >
+            <img class="card-img-top" src="${img}" alt="Image description" >
             <div class="card-body">
               <p class="product-brand">Brand</p>
               <h3 class="card-title">${products[i].title}</h3>
