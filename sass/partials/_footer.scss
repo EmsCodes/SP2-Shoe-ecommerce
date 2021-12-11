@@ -1,9 +1,12 @@
 footer {
-	margin-top: 25px;
-
+	.footer-logo {
+		width: 50px;
+		height: auto;
+	}
 	.wrapper {
 		display: flex;
 		justify-content: space-evenly;
+		padding-top: 50px;
 	}
 	.copyright {
 		text-align: center;

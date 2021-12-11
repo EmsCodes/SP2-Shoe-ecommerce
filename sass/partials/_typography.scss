@@ -119,6 +119,16 @@ h1 {
 	}
 	li {
 		list-style-type: none;
+		margin-bottom: 10px;
+		font-family: $secondary-heading-font;
+		font-size: 1.4em;
+
+		&::before {
+			content: "- ";
+		}
+	}
+	input[type="submit"] {
+		color: $light-beige;
 	}
 }
 
@@ -180,6 +190,20 @@ h1 {
 			line-height: 150%;
 			font-weight: 100;
 		}
+	}
+}
+
+// Footer
+
+footer {
+	ul {
+		text-decoration: none;
+	}
+	li {
+		list-style-type: none;
+	}
+	a {
+		color: text;
 	}
 }
 

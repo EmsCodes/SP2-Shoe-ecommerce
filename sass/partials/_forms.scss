@@ -3,6 +3,7 @@ header {
 		display: none;
 	}
 	form {
+		display: flex;
 		flex: 0 0 100%;
 		order: 4;
 		position: absolute;
@@ -32,6 +33,21 @@ header {
 	label,
 	input {
 		display: block;
+	}
+}
+
+.newsletter {
+	form {
+		display: flex;
+	}
+	input[type="email"] {
+		padding: 10px;
+		border-left: 2px dotted $secondary-brown;
+		border-top: 2px dotted $secondary-brown;
+		border-bottom: 2px dotted $secondary-brown;
+		border-right: none;
+		border-width: 2px;
+		border-radius: 5px 0 0 5px;
 	}
 }
 

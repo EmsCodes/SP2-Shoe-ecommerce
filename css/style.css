@@ -7211,6 +7211,17 @@ h1, .h1 {
 
 .newsletter li {
   list-style-type: none;
+  margin-bottom: 10px;
+  font-family: "corporate-a-condensed", serif;
+  font-size: 1.4em;
+}
+
+.newsletter li::before {
+  content: "- ";
+}
+
+.newsletter input[type="submit"] {
+  color: #ffddbe;
 }
 
 .product-section .card-title {
@@ -7270,6 +7281,18 @@ h1, .h1 {
 .product-detail-container .details-text .product-description {
   line-height: 150%;
   font-weight: 100;
+}
+
+footer ul {
+  text-decoration: none;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+footer a {
+  color: text;
 }
 
 @media (min-width: 700px) {
@@ -7332,8 +7355,9 @@ body {
   position: relative;
 }
 
-footer {
-  margin-top: 25px;
+footer .footer-logo {
+  width: 50px;
+  height: auto;
 }
 
 footer .wrapper {
@@ -7343,6 +7367,7 @@ footer .wrapper {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-top: 50px;
 }
 
 footer .copyright {
@@ -7434,6 +7459,16 @@ header .search-icon {
 header .fas {
   color: #734021;
   font-size: 1.3em;
+}
+
+.newsletter input[type="submit"] {
+  background: url("/images/brown-leather.png");
+  font-family: "copperplate", serif;
+  font-weight: 100;
+  border: 3px dotted #40210f;
+  border-width: 2px;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
 }
 
 .product-detail-container .buy-btn {
@@ -7835,7 +7870,7 @@ header .cart-counter {
     width: 90%;
   }
   .featured-products .card-container {
-    width: 22.49vw;
+    width: 22.48vw;
   }
 }
 
@@ -7854,6 +7889,7 @@ header .cart-counter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #efb07b;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -7862,11 +7898,9 @@ header .cart-counter {
 }
 
 .newsletter .newsletter__form {
-  width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 25px;
-  background-color: #efb07b;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 35px;
 }
 
 .newsletter .newsletter__img {
@@ -7898,11 +7932,18 @@ header .cart-counter {
   background-image: url("/images/special-offer.jpg");
 }
 
+.newsletter ul {
+  padding-left: 0;
+}
+
 header .search-bar {
   display: none;
 }
 
 header form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -7936,6 +7977,22 @@ header input[type="search"] {
 .edit-product label,
 .edit-product input {
   display: block;
+}
+
+.newsletter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border-left: 2px dotted #734021;
+  border-top: 2px dotted #734021;
+  border-bottom: 2px dotted #734021;
+  border-right: none;
+  border-width: 2px;
+  border-radius: 5px 0 0 5px;
 }
 
 @media (min-width: 992px) {
