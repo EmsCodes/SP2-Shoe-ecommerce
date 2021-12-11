@@ -1,4 +1,4 @@
-@mixin btn-style {
+.btn-style {
 	border: $button-border;
 	border-width: 2px;
 	text-align: center;
@@ -14,7 +14,7 @@
 	max-width: 350px;
 }
 
-@mixin form-btn {
+.form-btn {
 	background: url("/images/brown-leather.png");
 	font-family: $primary-heading-font;
 	font-weight: 100;
@@ -26,7 +26,7 @@
 
 .hero-background {
 	a {
-		@include btn-style;
+		@extend .btn-style;
 		width: 50vw;
 		max-width: 300px;
 		box-shadow: 0px 7.5px 15px #000;
@@ -61,7 +61,7 @@
 		text-align: center;
 
 		.more-btn {
-			@include btn-style;
+			@extend .btn-style;
 			width: 50vw;
 			margin-top: 15px;
 			box-shadow: $button-box-shadow;
@@ -94,7 +94,7 @@ header {
 // newsletter submit button
 .newsletter {
 	input[type="submit"] {
-		@include form-btn;
+		@extend .form-btn;
 	}
 }
 
@@ -102,7 +102,7 @@ header {
 
 .product-detail-container {
 	.buy-btn {
-		@include btn-style;
+		@extend .btn-style;
 		transform: translateY(-15%);
 		font-size: 1em;
 		text-transform: uppercase;

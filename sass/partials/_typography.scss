@@ -113,7 +113,7 @@ h1 {
 		left: 50%;
 		transform: translate(-50%);
 		background-color: $red;
-		padding: 10px 15px;
+		padding: 10px 20px;
 		border-radius: 30px;
 		color: $white;
 	}
@@ -121,7 +121,7 @@ h1 {
 		list-style-type: none;
 		margin-bottom: 10px;
 		font-family: $secondary-heading-font;
-		font-size: 1.4em;
+		font-size: 1.5em;
 
 		&::before {
 			content: "- ";
@@ -227,6 +227,20 @@ footer {
 		p {
 			padding-bottom: 20px;
 			font-size: 1.5em;
+		}
+	}
+
+	// Newsletter section
+
+	.newsletter {
+		h4 {
+			font-size: 1.8em;
+		}
+		.news-img-text {
+			font-size: 1.2em;
+		}
+		li {
+			font-size: 1.7em;
 		}
 	}
 }

@@ -12,7 +12,7 @@ export default function featuredProducts(products, carouselContainer) {
 			console.log(img);
 
 			container.innerHTML += `<div class="card-container">
-      <a href="products.html">
+      <a href="product-page.html?id=${products[i].id}">
           <div class="card">
             <img class="card-img-top" src="${img}" alt="Image description" >
             <div class="card-body">

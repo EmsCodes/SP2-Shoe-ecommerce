@@ -4,9 +4,11 @@ import { addToCart } from "../components/functions.js";
 export function fetchProductDetails(product, container) {
 	const detailsContainer = document.querySelector(container);
 
+	console.log(product.image_url);
+
 	const breadCrumbProductTitle = document.querySelector(".product-title");
 
-	const productImage = url + product.image.url;
+	const img = product.image_url;
 
 	const title = product.title;
 	const id = product.id;
@@ -41,13 +43,13 @@ export function fetchProductDetails(product, container) {
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="${productImage}" class="d-block" alt="${product.image.alternativeText}" />
+          <img src="${img}" class="d-block" alt="" />
         </div>
         <div class="carousel-item">
-          <img src="${productImage}" class="d-block" alt="${product.image.alternativeText}" />
+          <img src="${img}" class="d-block" alt="" />
         </div>
         <div class="carousel-item">
-          <img src="${productImage}" class="d-block" alt="${product.image.alternativeText}" />
+          <img src="${img}" class="d-block" alt="" />
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide="prev">
@@ -72,7 +74,7 @@ export function fetchProductDetails(product, container) {
         <p class="product-description">${product.description}</p>
         <div class="price-flex-container">
           <p class="price"><span class="sr-only">Price:</span>$${price}</p>
-          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}" data-image="${productImage}">Buy<i class="fas fa-cart-plus"></i></button>
+          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}" data-image="${img}">Buy<i class="fas fa-cart-plus"></i></button>
         </div>
       </div>
     </div>
