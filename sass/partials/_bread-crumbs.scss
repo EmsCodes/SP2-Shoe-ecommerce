@@ -8,10 +8,16 @@
 	}
 	a {
 		text-decoration: none;
-		color: $non-active-btn-colour;
+		color: $text-colour;
 	}
 	li {
 		list-style-type: none;
 		font-family: $secondary-heading-font;
+		font-size: 1em;
+		margin-left: 5px;
+	}
+	.active {
+		color: $secondary-brown;
+		text-decoration: underline;
 	}
 }

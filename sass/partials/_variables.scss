@@ -11,6 +11,10 @@ $text-colour: #404040;
 $brown-text: #6f310d;
 $beige-text: #ffead6;
 
+@mixin dotted-border($px, $type, $color) {
+	border-bottom: $px $type $color;
+}
+
 $beige-linear-gradient: linear-gradient(
 	180deg,
 	rgba(255, 221, 190, 0.8967787798713235) 0%,

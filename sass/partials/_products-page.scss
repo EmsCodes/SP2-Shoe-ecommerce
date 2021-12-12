@@ -29,21 +29,20 @@
 	}
 	.row {
 		justify-content: start;
-		width: 95%;
 		margin: 0 auto;
+		width: 98%;
 	}
 	.card-img-top {
-		height: 150px;
+		height: 125px;
 		object-fit: cover;
 	}
 	.card-body {
-		height: 125px;
+		height: 100px;
 		position: relative;
-		padding-top: 10px;
+		padding: 5px;
 	}
 	.card {
 		box-shadow: $box-shadow;
-		max-width: 50vw;
 	}
 	.price,
 	.fas {
@@ -56,13 +55,14 @@
 		.price,
 		.bag-icon {
 			position: absolute;
-			bottom: 10%;
 		}
 		.bag-icon {
 			right: 10%;
+			bottom: 20%;
 		}
 		.price {
 			left: 10%;
+			bottom: 10%;
 		}
 	}
 }
@@ -81,7 +81,7 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
-			background-color: #00000065;
+			background-color: #0000007e;
 		}
 		.women::before,
 		.men::before {
@@ -151,6 +151,21 @@
 				font-size: 2em;
 				text-shadow: 3px 3px 5px #000000b6;
 			}
+		}
+	}
+	.product-section {
+		.row {
+			width: 90%;
+			max-width: 1200px;
+		}
+		.card-img-top {
+			height: 125px;
+			object-fit: cover;
+		}
+		.card-body {
+			height: 100px;
+			position: relative;
+			padding: 5px;
 		}
 	}
 }

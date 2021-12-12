@@ -20,23 +20,21 @@ function getCart(cartItems) {
 		totalPrice += price;
 
 		cartList.innerHTML += `<li class="cart-item"> 
-      <a href="product-page.html?id=${itemId}"class="product-link">
+      <div>
+			<a href="product-page.html?id=${itemId}"class="product-link">
         <img src="${item.productImage}" class="product-img">
       </a>
-      <div>
         <p class="productBrand">Brand</p>
         <a href="product-page.html?id=${itemId}"class="product-link">
-          <h3>${item.productTitle}</h3>
+          <h2>${item.productTitle}</h2>
         </a>
-        <p>Size: 10</p>
-        <p>Colour: Brown</p>
       </div>
       <div class="cart-info">
-        <p class="quantity">${item}</p>
+				<p>Size: 10</p>
+        <p>Colour: Brown</p>
         <p class="price">${item.productPrice}</p>
-        <p class="total-price">${item.productPrice}</p>
+				<button class="remove-btn" data-id="${itemId}"><i class="fas fa-times" data-id="${itemId}"></i></button>
       </div>
-      <button class="remove-btn" data-id="${itemId}"><i class="fas fa-times" data-id="${itemId}"></i></button>
     </li>`;
 
 		const removeBtn = document.querySelectorAll(".remove-btn");

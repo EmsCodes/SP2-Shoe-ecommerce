@@ -1,9 +1,25 @@
-.shopping-list {
-	width: 50%;
+.shopping-cart {
+	width: 85%;
+	margin: 0 auto;
+	.product-info {
+		display: flex;
+		justify-content: space-between;
+	}
+}
 
+.shopping-list {
+	padding: 0;
 	.product-img {
 		width: 125px;
 		height: 100px;
 		object-fit: cover;
+	}
+
+	.cart-item {
+		margin: 0 auto;
+		display: flex;
+		border-bottom: $price-border;
+		margin-bottom: 20px;
+		justify-content: space-between;
 	}
 }

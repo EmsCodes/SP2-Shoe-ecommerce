@@ -7241,15 +7241,16 @@ form input {
 
 .product-section .card-title {
   font-family: "corporate-a-condensed", serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  margin-bottom: 0;
+  line-height: 0.75;
+  margin-top: 3px;
 }
 
 .product-section .brand-name {
   text-align: center;
+  font-size: 0.8em;
   margin-bottom: 0;
   font-family: "copperplate", serif;
 }
@@ -7257,6 +7258,17 @@ form input {
 .product-section a {
   text-decoration: none;
   color: #a8592e;
+}
+
+.product-section .price {
+  font-size: 1em;
+  border: 3px dotted #40210f;
+  border-width: 2px;
+  padding: 5px 10px;
+}
+
+.product-section .fas {
+  font-size: 1.2em;
 }
 
 .product-detail-container .details-text {
@@ -7296,6 +7308,23 @@ form input {
 .product-detail-container .details-text .product-description {
   line-height: 150%;
   font-weight: 100;
+}
+
+.shopping-cart h1, .shopping-cart .h1 {
+  border-bottom: 3px dotted #734021;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.shopping-cart .product-info {
+  font-family: "corporate-a-condensed", serif;
+  font-size: 1.3em;
+  border-bottom: 1px dotted #40210f;
+  margin-bottom: 15px;
+}
+
+.shopping-cart .product-info p {
+  margin-bottom: 0;
 }
 
 footer ul {
@@ -7388,12 +7417,19 @@ footer a {
 
 .breadcrumbs a {
   text-decoration: none;
-  color: #734021f1;
+  color: #404040;
 }
 
 .breadcrumbs li {
   list-style-type: none;
   font-family: "corporate-a-condensed", serif;
+  font-size: 1em;
+  margin-left: 5px;
+}
+
+.breadcrumbs .active {
+  color: #734021;
+  text-decoration: underline;
 }
 
 * {
@@ -7412,7 +7448,8 @@ body {
 }
 
 main {
-  min-height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7655,7 +7692,7 @@ header .shop-top-info {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
-  background-color: #ffddbe;
+  background: #ffddbe;
   color: #9f1d1a;
   font-size: 0.9em;
   padding-top: 7.5px;
@@ -7873,8 +7910,22 @@ header .cart-counter {
   }
 }
 
+.shopping-cart {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.shopping-cart .product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .shopping-list {
-  width: 50%;
+  padding: 0;
 }
 
 .shopping-list .product-img {
@@ -7882,6 +7933,18 @@ header .cart-counter {
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.shopping-list .cart-item {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px dotted #40210f;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .featured-products {
@@ -7951,7 +8014,7 @@ header .cart-counter {
 
 .featured-products .card-container .card {
   width: 85%;
-  max-width: 300px;
+  max-width: 275px;
   height: 275px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8040,8 +8103,9 @@ header .cart-counter {
 }
 
 .product-detail-container .carousel-item img {
-  width: 100%;
-  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 .product-detail-container .carousel-indicators {
@@ -8094,8 +8158,22 @@ header .cart-counter {
   }
 }
 
+.shopping-cart {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.shopping-cart .product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .shopping-list {
-  width: 50%;
+  padding: 0;
 }
 
 .shopping-list .product-img {
@@ -8103,6 +8181,18 @@ header .cart-counter {
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.shopping-list .cart-item {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px dotted #40210f;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .newsletter {
@@ -8459,26 +8549,25 @@ header input[type="search"] {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  width: 95%;
   margin: 0 auto;
+  width: 98%;
 }
 
 .product-section .card-img-top {
-  height: 150px;
+  height: 125px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .product-section .card-body {
-  height: 125px;
+  height: 100px;
   position: relative;
-  padding-top: 10px;
+  padding: 5px;
 }
 
 .product-section .card {
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  max-width: 50vw;
 }
 
 .product-section .price,
@@ -8500,15 +8589,16 @@ header input[type="search"] {
 .product-section .price-flex-container .price,
 .product-section .price-flex-container .bag-icon {
   position: absolute;
-  bottom: 10%;
 }
 
 .product-section .price-flex-container .bag-icon {
   right: 10%;
+  bottom: 20%;
 }
 
 .product-section .price-flex-container .price {
   left: 10%;
+  bottom: 10%;
 }
 
 .gender-category ul {
@@ -8528,7 +8618,7 @@ header input[type="search"] {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #00000065;
+  background-color: #0000007e;
 }
 
 .gender-category ul .women {
@@ -8599,6 +8689,20 @@ header input[type="search"] {
     font-size: 2em;
     text-shadow: 3px 3px 5px #000000b6;
   }
+  .product-section .row {
+    width: 90%;
+    max-width: 1200px;
+  }
+  .product-section .card-img-top {
+    height: 125px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .product-section .card-body {
+    height: 100px;
+    position: relative;
+    padding: 5px;
+  }
 }
 
 .product-detail-container .text-bg {
@@ -8612,7 +8716,8 @@ header input[type="search"] {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #ffddbe;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 221, 190, 0.896779)), color-stop(50%, #efc19a), to(#efb07b));
+  background: linear-gradient(180deg, rgba(255, 221, 190, 0.896779) 0%, #efc19a 50%, #efb07b 100%);
   -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
