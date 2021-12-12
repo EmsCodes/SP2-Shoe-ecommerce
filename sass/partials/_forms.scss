@@ -22,6 +22,10 @@ header {
 	}
 }
 
+.form-input {
+	padding: 7.5px;
+}
+
 // add product form
 
 .add-product,
@@ -41,7 +45,7 @@ header {
 		display: flex;
 	}
 	input[type="email"] {
-		padding: 10px;
+		@extend .form-input;
 		border-left: 2px dotted $secondary-brown;
 		border-top: 2px dotted $secondary-brown;
 		border-bottom: 2px dotted $secondary-brown;
@@ -51,7 +55,35 @@ header {
 	}
 }
 // login form
-.login-form {
+.login-wrapper {
+	background: $beige-linear-gradient;
+	.login-form {
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		fieldset {
+			width: 90%;
+			max-width: 400px;
+
+			margin: 0 auto;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		label,
+		input {
+			display: block;
+			width: 100%;
+		}
+		input {
+			@extend .form-input;
+			border: 2px dotted $secondary-brown;
+		}
+		label {
+			margin-bottom: 5px;
+		}
+	}
 }
 
 @media (min-width: 992px) {

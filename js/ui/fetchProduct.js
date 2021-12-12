@@ -52,19 +52,19 @@ export function fetchProductDetails(product, container) {
           <img src="${img}" class="d-block" alt="" />
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"data-bs-slide="prev" aria-label="previous carousel image navigation">
         <span
           class="carousel-control-prev-icon"
           aria-hidden="true"
         ></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden"></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" aria-label="next carousel image navigation">
         <span
           class="carousel-control-next-icon"
           aria-hidden="true"
         ></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden"></span>
       </button>
     </div>
     <div class="text-bg">
@@ -74,7 +74,7 @@ export function fetchProductDetails(product, container) {
         <p class="product-description">${product.description}</p>
         <div class="price-flex-container">
           <p class="price"><span class="sr-only">Price:</span>$${price}</p>
-          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}" data-image="${img}">Buy<i class="fas fa-cart-plus"></i></button>
+          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}" data-image="${img}">Buy<i class="fas fa-cart-plus" aria-hidden="true"></i></button>
         </div>
       </div>
     </div>

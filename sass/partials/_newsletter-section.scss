@@ -1,10 +1,15 @@
 .newsletter {
 	display: flex;
-	background-color: $orange-beige;
 	flex-direction: column;
 	padding-top: 25px;
 	max-width: 1200px;
 	margin: 0 auto;
+	width: 100%;
+
+	.form-wrapper {
+		background: $beige-linear-gradient;
+		width: 100%;
+	}
 
 	.newsletter__form {
 		width: 90%;
@@ -59,6 +64,10 @@
 		justify-content: space-between;
 		padding-top: 0;
 
+		.form-wrapper {
+			width: 45%;
+		}
+
 		.newsletter__form {
 			width: auto;
 			margin-left: 3%;
@@ -87,10 +96,6 @@
 
 @media (min-width: 1200px) {
 	.newsletter {
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		padding-top: 0;
-
 		.newsletter__form {
 			margin-left: 5%;
 			padding-bottom: 50px;

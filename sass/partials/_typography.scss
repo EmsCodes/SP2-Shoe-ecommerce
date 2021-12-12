@@ -16,6 +16,26 @@ h1 {
 	font-family: $secondary-heading-font;
 }
 
+// Forms
+
+.form-error {
+	color: $red;
+	font-family: $secondary-heading-font;
+}
+
+form {
+	label,
+	input {
+		font-family: $secondary-heading-font;
+		font-size: 1.2em;
+	}
+}
+.login-form {
+	h1 {
+		font-size: 1.5em;
+	}
+}
+
 // index hero-section
 .hero-text {
 	text-align: center;

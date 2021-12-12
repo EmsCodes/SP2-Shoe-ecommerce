@@ -11,6 +11,15 @@ $text-colour: #404040;
 $brown-text: #6f310d;
 $beige-text: #ffead6;
 
+$beige-linear-gradient: linear-gradient(
+	180deg,
+	rgba(255, 221, 190, 0.8967787798713235) 0%,
+	rgba(239, 193, 154, 1) 50%,
+	rgba(239, 176, 123, 1) 100%
+);
+
+$non-active-btn-colour: #734021f1;
+
 $primary-font: "corporate-a", serif;
 $primary-heading-font: "copperplate", serif;
 $secondary-heading-font: "corporate-a-condensed", serif;

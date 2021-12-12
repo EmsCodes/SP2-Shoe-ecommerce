@@ -46,6 +46,7 @@
 		max-height: 285px;
 		box-sizing: border-box;
 		margin-bottom: 35px;
+		align-content: center;
 
 		.card {
 			width: 85%;
@@ -109,19 +110,38 @@
 .product-detail-container {
 	.carousel-inner {
 		background-color: $light-beige;
-		margin: 0 auto;
+		// margin: 0 auto;
 	}
 
 	.carousel-item {
 		height: 35vh;
-		width: auto;
-		object-fit: cover;
-		object-position: center;
+		width: 100%;
 
 		img {
-			height: 100%;
-			width: auto;
+			width: 100%;
+			height: auto;
 		}
+	}
+	.carousel-indicators {
+		margin-bottom: 5px;
+		button {
+			background-color: $non-active-btn-colour;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+		}
+		.active {
+			background-color: #734021;
+		}
+	}
+	.carousel-control-next,
+	.carousel-control-prev {
+		background: $secondary-brown;
+		color: $white;
+		opacity: 0.6;
+		top: 30%;
+		bottom: 30%;
+		width: 7.5%;
 	}
 }
 
@@ -129,6 +149,14 @@
 	.featured-products {
 		.card-container {
 			width: 49.99vw;
+		}
+	}
+	// product detail page carousel
+	////////////////////////////////////////
+
+	.product-detail-container {
+		.carousel-item {
+			height: 45vh;
 		}
 	}
 }

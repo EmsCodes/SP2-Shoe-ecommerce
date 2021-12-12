@@ -6,6 +6,7 @@
 }
 
 header {
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
 	.shop-top-info {
 		display: flex;
 		flex-flow: row nowrap;
@@ -22,7 +23,7 @@ header {
 			flex-direction: row;
 			align-items: center;
 			margin-bottom: 0;
-			animation: fade-in 5s ease-in;
+			animation: fade-in 3s ease-in;
 		}
 		span {
 			display: none;
