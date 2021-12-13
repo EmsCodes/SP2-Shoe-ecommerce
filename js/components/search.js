@@ -22,26 +22,24 @@ export function displaySearchBar() {
 }
 
 // filter/search for shoes
-function searchProducts(products, container) {
+function searchProducts(products) {
 	searchField.onkeyup = function () {
+		searchContainer.innerHTML = "";
 		const searchValue = this.value.trim().toLowerCase();
 
 		const filteredProduct = products.filter(
 			(product) =>
-				product.title.toLowerCase().includes(searchValue) ||
+				product.title.toLowerCase().startsWith(searchValue) ||
 				product.description.toLowerCase().includes(searchValue)
 		);
-		searchContainer.innerHTML = "";
 
 		for (let i = 0; i < filteredProduct.length; i++) {
-			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title}</a></li>`;
-		}
+			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title} ></a></li>`;
 
-		if (!searchValue.length) {
-			searchContainer.innerHTML = "No results!";
+			if (!searchValue.length) {
+				searchContainer.innerHTML = "No results!";
+			}
 		}
-
-		searchProducts(filteredProduct, container);
 	};
 }
 
@@ -51,7 +49,7 @@ async function fetchItems() {
 
 		const products = await productResponse.json();
 
-		searchProducts(products, searchContainer);
+		searchProducts(products);
 	} catch (error) {
 		console.log(error);
 	}

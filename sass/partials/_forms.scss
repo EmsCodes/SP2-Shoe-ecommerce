@@ -41,6 +41,8 @@ header {
 		position: relative;
 		background-color: $white;
 		z-index: 5;
+		max-height: 50vh;
+		overflow: scroll;
 		li {
 			width: 90%;
 			padding: 10px;

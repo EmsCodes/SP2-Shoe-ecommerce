@@ -8426,6 +8426,8 @@ header .search-results {
   position: relative;
   background-color: #fff;
   z-index: 5;
+  max-height: 50vh;
+  overflow: scroll;
 }
 
 header .search-results li {
