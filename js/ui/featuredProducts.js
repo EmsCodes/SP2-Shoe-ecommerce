@@ -9,8 +9,6 @@ export default function featuredProducts(products, carouselContainer) {
 		if (products[i].featured === true) {
 			const img = products[i].image_url;
 
-			console.log(img);
-
 			container.innerHTML += `<div class="card-container">
       <a href="product-page.html?id=${products[i].id}">
           <div class="card">

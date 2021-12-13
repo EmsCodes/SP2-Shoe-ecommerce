@@ -39,7 +39,7 @@
 						/></a>
 					</div>
 					<div class="menu-container">
-						<form class="search-bar" style="display: none">
+						<form class="search-bar" style="display: none" autocomplete="off">
 							<label for="search"><span class="sr-only">Search</span></label>
 							<input
 								type="search"
@@ -48,7 +48,10 @@
 								aria-label="Search for product"
 								placeholder="Search for product..."
 							/>
-							<button><i class="fas fa-search"></i></button>
+							<i class="fas fa-times"></i>
+							<ul class="search-results">
+								<div class="loader"></div>
+							</ul>
 						</form>
 						<div class="header-icons">
 							<button class="search-icon" aria-label="search form button">
