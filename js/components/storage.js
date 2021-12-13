@@ -17,8 +17,6 @@ export function getUsername() {
 	const user = getFromStorage(userKey);
 
 	if (user) {
-		// console.log(user.username);
-
 		return user.username;
 	}
 	return null;
@@ -32,7 +30,7 @@ export function getFromStorage(key) {
 	const value = localStorage.getItem(key);
 
 	if (!value) {
-		return [];
+		return false;
 	}
 
 	return JSON.parse(value);

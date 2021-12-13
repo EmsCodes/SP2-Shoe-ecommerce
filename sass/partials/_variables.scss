@@ -15,6 +15,22 @@ $beige-text: #ffead6;
 	border-bottom: $px $type $color;
 }
 
+@mixin font-size(
+	$min-size,
+	$max-size,
+	$viewport-width,
+	$min-viewport-width,
+	$max-viewport-width
+) {
+	font-size: calc(
+		$min-size + ($max-size - $min-size) *
+			(
+				($viewport-width - $min-viewport-width) /
+					($max-viewport-width- $min-viewport-width)
+			)
+	);
+}
+
 $beige-linear-gradient: linear-gradient(
 	180deg,
 	rgba(255, 221, 190, 0.8967787798713235) 0%,

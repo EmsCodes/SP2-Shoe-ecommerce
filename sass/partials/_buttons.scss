@@ -117,9 +117,25 @@ header {
 	}
 }
 
+// cart-btn
+
+.cart-info {
+	position: relative;
+	.remove-btn {
+		background: none;
+		border: none;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: rgb(114, 114, 114);
+		font-size: 1em;
+	}
+}
+
 // login-btn
 
-.login-btn {
+.login-btn,
+.add-btn {
 	@extend .form-btn;
 	margin-top: 25px;
 	width: 100%;
@@ -140,7 +156,6 @@ header {
 	color: $secondary-brown;
 	background: none;
 	padding: 7.5px;
-	display: block;
 	font-family: $secondary-heading-font;
 	font-weight: 100;
 	margin-bottom: 40px;
@@ -154,7 +169,6 @@ header {
 	.log-out-btn {
 		width: 100px;
 		margin: 0 auto;
-		display: none;
 		font-size: 1.2em;
 		border: 1px dotted $secondary-brown;
 		text-decoration: none;

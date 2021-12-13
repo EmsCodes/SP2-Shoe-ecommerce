@@ -229,17 +229,50 @@ form {
 
 .shopping-cart {
 	h1 {
-		@include dotted-border(3px, dotted, $secondary-brown);
+		@include dotted-border(2px, dashed, $secondary-brown);
 		margin-top: 35px;
 		margin-bottom: 20px;
+	}
+	h2 {
+		font-family: $primary-heading-font;
+		font-size: 1em;
+	}
+	a {
+		color: $text-colour;
+	}
+	.product-brand {
+		margin-top: 5px;
+		margin-bottom: 0;
+		font-family: $secondary-heading-font;
+		font-size: 1.2em;
+	}
+
+	h2,
+	.product-brand {
+		width: 100%;
+		text-align: center;
 	}
 	.product-info {
 		font-family: $secondary-heading-font;
 		font-size: 1.3em;
-		border-bottom: $price-border;
-		margin-bottom: 15px;
+		@include dotted-border(2px, dotted, $secondary-brown);
+		margin-bottom: 25px;
 		p {
 			margin-bottom: 0;
+			padding-bottom: 5px;
+		}
+	}
+	.cart-info {
+		&:nth-child(1),
+		&:nth-child(2) {
+			font-family: $secondary-heading-font;
+			font-size: 1.1em;
+		}
+		.price {
+			border: $price-border;
+			font-size: 1em;
+			text-align: center;
+			padding: 3px;
 		}
 	}
 }

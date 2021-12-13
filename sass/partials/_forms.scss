@@ -29,13 +29,29 @@ header {
 // add product form
 
 .add-product,
-.edit-product {
-	form {
-		width: 90%;
+.edit-product,
+.delete-product {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	fieldset {
+		width: 85%;
 		margin: 0 auto;
+		max-width: 300px;
+	}
+
+	input,
+	textarea {
+		width: 100%;
 	}
 	label,
-	input {
+	input,
+	textarea {
+		display: block;
+	}
+	.product-featured {
 		display: block;
 	}
 }
@@ -54,9 +70,10 @@ header {
 		border-radius: 5px 0 0 5px;
 	}
 }
-// login form
-.login-wrapper {
+// forms
+.form-wrapper {
 	background: $beige-linear-gradient;
+
 	.login-form {
 		width: 100%;
 		margin: 0 auto;
@@ -64,7 +81,7 @@ header {
 		padding-bottom: 50px;
 
 		fieldset {
-			width: 90%;
+			width: 85%;
 			max-width: 400px;
 
 			margin: 0 auto;
@@ -85,6 +102,8 @@ header {
 		}
 	}
 }
+
+// products.html search form
 
 @media (min-width: 992px) {
 	header {

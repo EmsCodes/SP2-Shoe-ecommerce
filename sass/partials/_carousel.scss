@@ -6,7 +6,7 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	margin-top: 40px;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 	position: relative;
 
 	.container {
@@ -39,13 +39,12 @@
 		overflow: hidden;
 	}
 	.card-container {
-		border: 1px solid red;
 		width: 99.9vw;
 		min-width: 175px;
 		min-height: 225px;
 		max-height: 285px;
 		box-sizing: border-box;
-		margin-bottom: 35px;
+		margin-bottom: 25px;
 		align-content: center;
 
 		.card {

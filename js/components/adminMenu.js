@@ -1,12 +1,18 @@
-import { getUsername } from "./storage.js";
+import { getUsername, getToken } from "./storage.js";
 
 const userName = getUsername();
+const token = getToken();
 
 const logOutBtn = document.querySelector(".log-out-btn");
+const adminMenuLink = document.querySelector(".admin-nav-link");
 
 export function adminMenu() {
-	if (userName) {
+	if (!userName || !token) {
+		logOutBtn.style.display = "none";
+		adminMenuLink.style.display = "none";
+	} else {
 		logOutBtn.style.display = "block";
+		adminMenuLink.style.display = "block";
 	}
 }
 

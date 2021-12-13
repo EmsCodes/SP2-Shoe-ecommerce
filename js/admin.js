@@ -3,14 +3,13 @@ import { getToken } from "./components/storage.js";
 import { url } from "./data/api.js";
 import { displayMessage } from "./components/displayMessage.js";
 
-adminMenu();
-logOut();
-
 const token = getToken();
 
 if (!token) {
 	window.location.href = "/";
 }
+adminMenu();
+logOut();
 
 const addForm = document.querySelector(".add-form");
 const message = document.querySelector(".message-container");

@@ -3,6 +3,9 @@ import { saveToken, saveUser } from "./components/storage.js";
 import checkLength from "./components/formCheck.js";
 import { displayMessage } from "./components/displayMessage.js";
 import { getToken } from "./components/storage.js";
+import { adminMenu } from "./components/adminMenu.js";
+
+adminMenu();
 
 // const messageContainer = document.querySelector(".message-container");
 const loginForm = document.querySelector(".login-form");

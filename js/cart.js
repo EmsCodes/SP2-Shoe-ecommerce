@@ -15,24 +15,31 @@ function getCart(cartItems) {
 	cartItems.forEach((item) => {
 		const price = parseInt(item.productPrice);
 
+		const priceContainer = document.querySelector(".price-total");
+		const itemNumber = document.querySelector(".items-in-cart");
+
+		itemNumber.innerHTML = item;
+
 		const itemId = item.productId;
 
 		totalPrice += price;
 
+		priceContainer.innerHTML = totalPrice;
+
 		cartList.innerHTML += `<li class="cart-item"> 
       <div>
 			<a href="product-page.html?id=${itemId}"class="product-link">
-        <img src="${item.productImage}" class="product-img">
+        <img src="${item.productImage}" class="product-img alt="product alt text">
       </a>
-        <p class="productBrand">Brand</p>
+        <p class="product-brand">Brand</p>
         <a href="product-page.html?id=${itemId}"class="product-link">
           <h2>${item.productTitle}</h2>
         </a>
       </div>
       <div class="cart-info">
 				<p>Size: 10</p>
-        <p>Colour: Brown</p>
-        <p class="price">${item.productPrice}</p>
+        <p>Colour: Colour</p>
+        <p class="price">$${item.productPrice}</p>
 				<button class="remove-btn" data-id="${itemId}"><i class="fas fa-times" data-id="${itemId}"></i></button>
       </div>
     </li>`;
