@@ -16,7 +16,7 @@ export default function createProducts(products, container) {
 
 		if (userName) {
 			productLink = "edit.html?id";
-			productIcon = `<p class="edit-product">Edit product</p>`;
+			productIcon = `<p class="">Edit</p>`;
 		}
 
 		// const productImg = url + img;

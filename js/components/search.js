@@ -29,16 +29,16 @@ function searchProducts(products) {
 
 		const filteredProduct = products.filter(
 			(product) =>
-				product.title.toLowerCase().startsWith(searchValue) ||
+				product.title.toLowerCase().includes(searchValue) ||
 				product.description.toLowerCase().includes(searchValue)
 		);
 
 		for (let i = 0; i < filteredProduct.length; i++) {
 			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title} ></a></li>`;
+		}
 
-			if (!searchValue.length) {
-				searchContainer.innerHTML = "No results!";
-			}
+		if (!searchValue.length || !filteredProduct) {
+			searchContainer.innerHTML = "No results!";
 		}
 	};
 }

@@ -1,8 +1,15 @@
 import { url } from "./data/api.js";
 import { fetchProductDetails } from "./ui/fetchProduct.js";
 import { detailsContainer } from "./data/variables.js";
+import { adminMenu, logOut } from "./components/adminMenu.js";
+import { displaySearchBar } from "./components/search.js";
 
-// const productContainer = document.querySelector(".product-detail-container");
+adminMenu();
+logOut();
+
+const searchBtn = document.querySelector(".search-icon");
+searchBtn.addEventListener("click", displaySearchBar);
+searchBtn.addEventListener("onkeyup", displaySearchBar);
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

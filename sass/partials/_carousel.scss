@@ -109,20 +109,20 @@
 .product-detail-container {
 	.carousel-inner {
 		background-color: $light-beige;
-		// margin: 0 auto;
 	}
 
 	.carousel-item {
-		height: 35vh;
-		width: 100%;
+		height: 40vh;
 
 		img {
 			object-fit: cover;
 			height: 100%;
+			width: 100%;
 		}
 	}
 	.carousel-indicators {
 		margin-bottom: 5px;
+		z-index: 1;
 		button {
 			background-color: $non-active-btn-colour;
 			width: 25px;

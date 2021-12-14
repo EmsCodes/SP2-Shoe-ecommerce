@@ -5,9 +5,21 @@
 	padding: 15px;
 	text-align: center;
 }
-
+.success {
+	@extend .message;
+	background: #828c5e;
+	border-color: $green;
+	color: $white;
+}
 .warning {
 	@extend .message;
 	background: rgba(255, 140, 0, 0.329);
-	border-color: darkorange;
+	border-color: $red;
+}
+
+.error {
+	@extend .message;
+	background: #9f1c1a73;
+	border-color: $red;
+	color: $dark-brown;
 }

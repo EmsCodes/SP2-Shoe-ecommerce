@@ -74,7 +74,7 @@ export function fetchProductDetails(product, container) {
         <p class="product-description">${product.description}</p>
         <div class="price-flex-container">
           <p class="price"><span class="sr-only">Price:</span>$${price}</p>
-          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}" data-image="${img}">Buy<i class="fas fa-cart-plus" aria-hidden="true"></i></button>
+          <button class="buy-btn" data-id="${id}" data-title="${title}" data-price="${price}" data-image="${img}">Add to cart<i class="fas fa-cart-plus" aria-hidden="true"></i></button>
         </div>
       </div>
     </div>
