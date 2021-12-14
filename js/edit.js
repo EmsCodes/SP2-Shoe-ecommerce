@@ -14,6 +14,7 @@ const token = getToken();
 if (!token) {
 	window.location.href = "/";
 }
+
 // display searchbar function for mobile and tablet
 const searchBtn = document.querySelector(".search-icon");
 searchBtn.addEventListener("click", displaySearchBar);
@@ -24,6 +25,11 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const productUrl = url + "/products/" + id;
+
+// const titleError = document.querySelector("#edit-title-error");
+// const descriptionError = document.querySelector("#edit-description-error");
+// const priceError = document.querySelector("#price-error");
+// const imgError = document.querySelector("#edit-img-error");
 
 const editForm = document.querySelector(".edit-form");
 const editTitle = document.querySelector("#edit-title");

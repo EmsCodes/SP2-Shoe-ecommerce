@@ -123,7 +123,7 @@
 							<label for="price">Product price</label>
 							<input type="text" name="price" id="price" />
 							<div class="form-error" id="price-error">
-								Please enter product price (at least 1 character)
+								Please enter product price (at least 1 number)
 							</div>
 						</div>
 						<div class="product-img">
@@ -131,7 +131,7 @@
 							<input type="url" name="product-img" id="product-img" />
 							<!-- <img src="" height="200" alt="Image preview" class="preview" /> -->
 							<div class="form-error" id="product-img-error">
-								Please add a image URL
+								Please add an image URL
 							</div>
 						</div>
 						<div class="product-featured">
@@ -145,6 +145,9 @@
 						<button class="add-btn">Add product</button>
 					</fieldset>
 				</form>
+				<section class="edit-section">
+					<div class="loader"></div>
+				</section>
 			</section>
 			<section class="edit-product"></section>
 			<section class="delete-product"></section>

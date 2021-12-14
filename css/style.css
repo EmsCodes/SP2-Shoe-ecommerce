@@ -7118,6 +7118,7 @@ h1, .h1 {
 .form-error {
   color: #9f1d1a;
   font-family: "corporate-a-condensed", serif;
+  display: none;
 }
 
 form label,
