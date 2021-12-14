@@ -65,8 +65,6 @@ function formSubmit(event) {
 	const imgValue = editProductImg.value.trim();
 	const featuredValue = editFeaturedCheckbox.checked;
 
-	console.log(imgValue);
-
 	if (
 		titleValue.length === 0 ||
 		descriptionValue.length === 0 ||
@@ -97,6 +95,8 @@ async function updateProduct(
 	featured,
 	id
 ) {
+	console.log(productImg);
+
 	const editUrl = url + "/products/" + id;
 
 	console.log(editUrl);
@@ -105,7 +105,7 @@ async function updateProduct(
 		title,
 		description,
 		price,
-		productImg,
+		image_url: productImg,
 		featured,
 	});
 
