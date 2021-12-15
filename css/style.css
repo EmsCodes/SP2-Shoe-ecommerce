@@ -7449,6 +7449,11 @@ footer a {
   color: #40210f;
 }
 
+.edit-section .edit-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .breadcrumbs {
   margin-top: 15px;
 }
