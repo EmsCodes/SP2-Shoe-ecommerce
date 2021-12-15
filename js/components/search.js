@@ -1,6 +1,5 @@
 // Function to display search form onclick
 import { url } from "../data/api.js";
-import { displayMessage } from "./displayMessage.js";
 
 const searchField = document.querySelector(`input[type="search"]`);
 

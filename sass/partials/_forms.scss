@@ -4,7 +4,7 @@ header {
 	}
 	form {
 		width: 100%;
-		height: 25vh;
+		height: 15vh;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -38,14 +38,17 @@ header {
 		max-width: 300px;
 		margin: 0 auto;
 		padding-top: 25px;
+		padding-bottom: 25px;
 		position: relative;
 		background-color: $white;
 		z-index: 10;
-		max-height: 50vh;
+		height: auto;
+		max-height: 25vh;
 		overflow: scroll;
 		li {
 			width: 90%;
 			padding: 10px;
+			background-color: white;
 		}
 	}
 
@@ -140,8 +143,11 @@ header {
 		.search-bar {
 			display: block;
 		}
+		.search-icon,
+		.fa-times {
+			display: none;
+		}
 		form {
-			flex: none;
 			position: static;
 			background-color: none;
 			padding-top: 0;

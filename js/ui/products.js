@@ -1,4 +1,3 @@
-import { url } from "../data/api.js";
 import { getUsername } from "../components/storage.js";
 
 const userName = getUsername();
@@ -7,8 +6,6 @@ export default function createProducts(products, container) {
 	const elementContainer = document.querySelector(container);
 
 	for (let i = 0; i < products.length; i++) {
-		console.log(products[i].image_url);
-
 		const img = products[i].image_url;
 
 		let productLink = "product-page.html?id";
@@ -18,8 +15,6 @@ export default function createProducts(products, container) {
 			productLink = "edit.html?id";
 			productIcon = `<p class="">Edit</p>`;
 		}
-
-		// const productImg = url + img;
 
 		elementContainer.innerHTML += `
     <div class="col-6 col-sm-4 col-lg-3">
