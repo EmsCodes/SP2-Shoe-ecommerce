@@ -11,13 +11,8 @@ export default function createProducts(products, container) {
 		let productLink = "product-page.html?id";
 		let productIcon = `<i class="fas fa-shopping-bag"></i>`;
 
-		if (userName) {
-			productLink = "edit.html?id";
-			productIcon = `<p class="">Edit</p>`;
-		}
-
 		elementContainer.innerHTML += `
-    <div class="col-6 col-sm-4 col-lg-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 gy-4">
       <a href="${productLink}=${products[i].id}">
       <div class="card">
         <img

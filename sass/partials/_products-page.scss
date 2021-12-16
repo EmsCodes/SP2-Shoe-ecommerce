@@ -30,10 +30,11 @@
 	.row {
 		justify-content: start;
 		margin: 0 auto;
-		width: 98%;
+		width: 80%;
 	}
 	.card-img-top {
-		height: 125px;
+		height: 150px;
+		object-fit: cover;
 	}
 	.card-body {
 		height: 100px;
@@ -72,6 +73,7 @@
 		grid-template-rows: 1fr 1fr;
 		padding-left: 0;
 		height: 350px;
+		margin-bottom: 0;
 
 		.colour-overlay {
 			content: "";
@@ -111,6 +113,21 @@
 			color: $light-beige;
 			font-size: 2em;
 			text-shadow: 3px 3px 5px #000000b6;
+		}
+	}
+}
+@media (min-width: 400px) {
+	.product-section {
+		.row {
+			width: 90%;
+		}
+		.card-img-top {
+			height: 150px;
+		}
+		.card-body {
+			height: 100px;
+			position: relative;
+			padding: 5px;
 		}
 	}
 }

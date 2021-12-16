@@ -24,13 +24,26 @@
 	color: $beige-text;
 	font-size: 1em;
 }
+.btn-hover {
+	background: url("/images/beige-leather.png");
+	color: $dark-brown;
+}
+.btn-active {
+	border-style: inset;
+}
 
 .hero-background {
-	a {
+	.shop-btn {
 		@extend .btn-style;
 		width: 50vw;
 		max-width: 300px;
 		box-shadow: 0px 7.5px 15px #000;
+	}
+	.shop-btn:hover {
+		@extend .btn-hover;
+	}
+	.shop-btn:active {
+		@extend .btn-active;
 	}
 }
 
@@ -67,6 +80,12 @@
 			margin-top: 15px;
 			box-shadow: $button-box-shadow;
 		}
+		.more-btn:hover {
+			@extend .btn-hover;
+		}
+		.more-btn:active {
+			@extend .btn-active;
+		}
 	}
 }
 
@@ -80,6 +99,12 @@ header {
 			background: url("/images/brown-leather.png");
 			color: $beige-text;
 			border-radius: 0 5px 5px 0;
+		}
+		button:hover {
+			@extend .btn-hover;
+		}
+		button:active {
+			@extend .btn-active;
 		}
 	}
 	.search-icon {
@@ -147,6 +172,15 @@ header {
 	box-shadow: $button-box-shadow;
 }
 
+.login-btn:hover,
+.add-btn:hover {
+	@extend .btn-hover;
+}
+.login-btn:active,
+.add-btn:active {
+	@extend .btn-active;
+}
+
 // log-out button
 
 .log-out-btn {
@@ -181,6 +215,11 @@ header {
 	padding: 5px;
 	width: 80%;
 	margin: 0 auto;
+}
+
+.edit-link:hover,
+.delete-btn:hover {
+	@extend .btn-hover;
 }
 
 @media (min-width: 992px) {
