@@ -328,14 +328,32 @@ form {
 // Footer
 
 footer {
-	ul {
-		text-decoration: none;
+	h5 {
+		font-family: $primary-heading-font;
+		font-size: 1.2em;
 	}
-	li {
-		list-style-type: none;
+	nav {
+		ul {
+			text-decoration: none;
+		}
+		li {
+			list-style-type: none;
+			margin-bottom: 5px;
+		}
+		a {
+			color: text;
+			color: $white;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+			color: $white;
+		}
 	}
-	a {
-		color: text;
+
+	.copyright {
+		margin-bottom: 0;
+		padding-bottom: 20px;
 	}
 }
 

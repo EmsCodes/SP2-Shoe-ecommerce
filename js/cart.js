@@ -1,4 +1,18 @@
-import { getFromStorage, saveToStorage } from "./components/storage.js";
+import {
+	getFromStorage,
+	saveToStorage,
+	getToken,
+} from "./components/storage.js";
+import { adminMenu, logOut } from "./components/adminMenu.js";
+
+adminMenu();
+logOut();
+
+const token = getToken();
+
+if (!token) {
+	window.location.href = "/";
+}
 
 const cart = getFromStorage("cart");
 const cartList = document.querySelector(".shopping-list");
@@ -8,12 +22,12 @@ function getCart(cartItems) {
 
 	cartList.innerHTML = "";
 
-	if (cart.length === 0) {
-		cartList.innerHTML = "Cart Empty!";
-	}
-
 	cartItems.forEach((item) => {
 		const price = parseInt(item.productPrice);
+
+		if (item.length === 0) {
+			cartList.innerHTML = "Cart Empty!";
+		}
 
 		const priceContainer = document.querySelector(".price-total");
 		const itemNumber = document.querySelector(".items-in-cart");

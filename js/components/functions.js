@@ -2,11 +2,10 @@ import { saveToStorage, getFromStorage } from "../components/storage.js";
 import { getToken } from "../components/storage.js";
 import { url } from "../data/api.js";
 import { displayMessage } from "./displayMessage.js";
-import { adminMenu, logOut } from "./adminMenu.js";
-
-const currentCart = getFromStorage("cart");
 
 const token = getToken();
+
+const currentCart = getFromStorage("cart");
 
 // add product function
 
@@ -170,8 +169,21 @@ async function deleteProduct() {
 	}
 }
 
+export function cartCounter() {
+	const cartCount = document.querySelector(".cart-counter");
+
+	for (let i = 0; i < currentCart.length; i++) {
+		console.log(i);
+
+		cartCount.innerHTML = currentCart.length;
+	}
+}
+
 // add to cart
 export function addToCart() {
+	const currentCart = getFromStorage("cart");
+	console.log(currentCart);
+
 	const productId = this.dataset.id;
 	const productTitle = this.dataset.title;
 	const productPrice = this.dataset.price;
@@ -183,20 +195,9 @@ export function addToCart() {
 		productPrice,
 		productImage,
 	};
-
 	currentCart.push(newProduct);
 
 	saveToStorage("cart", currentCart);
-}
-
-export function cartCounter() {
-	const cartCount = document.querySelector(".cart-counter");
-
-	for (let i = 0; i < currentCart.length; i++) {
-		console.log(i);
-
-		cartCount.innerHTML = currentCart.length;
-	}
 }
 
 // form check

@@ -1,5 +1,5 @@
 import { adminMenu, logOut } from "./components/adminMenu.js";
-import { getToken } from "./components/storage.js";
+import { getToken, getUsername } from "./components/storage.js";
 import { url } from "./data/api.js";
 import { displayMessage } from "./components/displayMessage.js";
 import checkLength from "./components/functions.js";
@@ -8,9 +8,10 @@ import { submitAddForm } from "./components/functions.js";
 import { createProducts } from "./components/functions.js";
 
 const token = getToken();
+const user = getUsername();
 const addForm = document.querySelector(".add-form");
 
-if (!token) {
+if (!user) {
 	window.location.href = "/";
 }
 adminMenu();

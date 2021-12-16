@@ -1,5 +1,5 @@
 import { adminMenu, logOut } from "./components/adminMenu.js";
-import { getToken } from "./components/storage.js";
+import { getToken, getUsername } from "./components/storage.js";
 import { url } from "./data/api.js";
 import { displaySearchBar } from "./components/search.js";
 import { messageDiv } from "./data/variables.js";
@@ -9,8 +9,9 @@ adminMenu();
 logOut();
 
 const token = getToken();
+const user = getUsername();
 
-if (!token) {
+if (!user) {
 	window.location.href = "/";
 }
 

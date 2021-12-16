@@ -1,17 +1,29 @@
 footer {
+	background-color: $secondary-brown;
+	color: $white;
 	.footer-logo {
 		width: 50px;
 		height: auto;
 	}
 	.wrapper {
 		display: flex;
+		flex-flow: row wrap;
 		justify-content: space-evenly;
 		padding-top: 50px;
+		width: 90%;
+		margin: 0 auto;
 	}
 	.copyright {
 		text-align: center;
 	}
 	.social-media {
 		text-align: center;
+	}
+
+	ul {
+		padding-left: 0;
+	}
+	.about {
+		max-width: 500px;
 	}
 }

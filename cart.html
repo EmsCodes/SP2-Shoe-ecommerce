@@ -22,13 +22,13 @@
 		<header>
 			<div class="shop-top-info">
 				<p class="info-shipping">
-					Free <span> shipping</span><i class="fas fa-shipping-fast"></i>
+					Free <span>shipping</span><i class="fas fa-shipping-fast"></i>
 				</p>
 				<p class="info-return">
-					90 days <span> free return policy</span><i class="fas fa-undo"></i>
+					90 days <span>free return policy</span><i class="fas fa-undo"></i>
 				</p>
 				<p class="info-satisfaction">
-					100% <span> satisfaction guarantee</span><i class="far fa-smile"></i>
+					100% <span>satisfaction guarantee</span><i class="far fa-smile"></i>
 				</p>
 			</div>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light ml-auto">
@@ -39,7 +39,7 @@
 						/></a>
 					</div>
 					<div class="menu-container">
-						<form class="search-bar">
+						<form class="search-bar" autocomplete="off">
 							<label for="search"><span class="sr-only">Search</span></label>
 							<input
 								type="search"
@@ -48,7 +48,10 @@
 								aria-label="Search for product"
 								placeholder="Search for product..."
 							/>
-							<button><i class="fas fa-search"></i></button>
+							<i class="fas fa-times" tabindex="0"></i>
+							<ul class="search-results">
+								<div class="loader"></div>
+							</ul>
 						</form>
 						<div class="header-icons">
 							<button class="search-icon" aria-label="search form button">
@@ -85,6 +88,9 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">About</a>
 							</li>
+							<li class="nav-item admin-nav-link">
+								<a class="nav-link" href="admin.html">Edit product(s)</a>
+							</li>
 						</ul>
 						<div class="nav-item">
 							<button class="log-out-btn">Log out</button>
@@ -119,6 +125,14 @@
 		</main>
 		<footer>
 			<div class="wrapper">
+				<section class="about">
+					<h5>About Handmade</h5>
+					<p>
+						Handmade have been making quality handmade shoes for men and women
+						through generations. A family business dating back to early 1900's.
+						We specialize in leather shoes, tailored to fit your feet perfectly.
+					</p>
+				</section>
 				<section class="footer-navigation">
 					<a href="index.html">
 						<img src="/images/Logo.png" alt="Handmade logo" />
