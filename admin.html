@@ -117,14 +117,14 @@
 							<h2>Add product</h2>
 						</legend>
 						<div class="title">
-							<label for="title">Product name</label>
+							<label for="title">Product name<span>*</span></label>
 							<input type="text" name="title" id="title" />
 							<div class="form-error" id="title-error">
 								Please enter a product name (at least 1 character)
 							</div>
 						</div>
 						<div class="description">
-							<label for="description">Product description</label>
+							<label for="description">Product description<span>*</span></label>
 							<textarea
 								type="text"
 								name="description"
@@ -138,14 +138,14 @@
 							</div>
 						</div>
 						<div class="product-price">
-							<label for="price">Product price</label>
+							<label for="price">Product price<span>*</span></label>
 							<input type="text" name="price" id="price" />
 							<div class="form-error" id="price-error">
 								Please enter product price (at least 1 number)
 							</div>
 						</div>
 						<div class="product-img">
-							<label for="product-img">Product image</label>
+							<label for="product-img">Product image<span>*</span></label>
 							<input type="url" name="product-img" id="product-img" />
 							<!-- <img src="" height="200" alt="Image preview" class="preview" /> -->
 							<div class="form-error" id="product-img-error">
@@ -164,8 +164,8 @@
 					</fieldset>
 				</form>
 			</section>
-
 			<section class="edit-section">
+				<div class="message-container"></div>
 				<ul class="edit-list">
 					<div class="loader"></div>
 				</ul>

@@ -2,8 +2,11 @@ import { saveToStorage, getFromStorage } from "../components/storage.js";
 import { getToken } from "../components/storage.js";
 import { url } from "../data/api.js";
 import { displayMessage } from "./displayMessage.js";
+import { adminMenu, logOut } from "./adminMenu.js";
 
 const currentCart = getFromStorage("cart");
+
+const token = getToken();
 
 // add product function
 
@@ -68,6 +71,7 @@ export function submitAddForm(event) {
 			imgValue
 		);
 		addForm.reset();
+		createProducts(data, container);
 	}
 }
 
@@ -107,7 +111,62 @@ async function addProduct(title, description, price, featured, image_url) {
 		}
 		console.log(result);
 	} catch (error) {
-		// console.log(error);
+		console.log(error);
+	}
+}
+
+// delete function
+
+export function createProducts(data, container) {
+	container.innerHTML = "";
+	for (let i = 0; i < data.length; i++) {
+		console.log(data[i].image_url);
+
+		container.innerHTML += `<li>
+			<img class="admin-product-img"src="${data[i].image_url}" alt="Image description">
+			<div class="edit-options">
+				<a href="product-page.html?id=${data[i].id}"><h3>${data[i].title}</h3></a>
+				<a class="edit-link" href="edit.html?id=${data[i].id}">Edit</a>
+				<button class="delete-btn" data-id="${data[i].id}"><span class="sr-only">Delete item</span><i class="fas fa-trash-alt" data-id="${data[i].id}"></i></button>
+			</div>
+			</li>`;
+	}
+	const deleteBtn = document.querySelectorAll(".delete-btn");
+
+	deleteBtn.forEach((btn) => {
+		btn.addEventListener("click", deleteProduct);
+	});
+}
+
+async function deleteProduct() {
+	const id = this.dataset.id;
+
+	console.log(id);
+	const deleteConfirm = confirm("Delete this product?");
+
+	if (deleteConfirm) {
+		const deleteUrl = url + "/products/" + id;
+
+		const options = {
+			method: "DELETE",
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		};
+
+		try {
+			const deleteResponse = await fetch(deleteUrl, options);
+			const result = await deleteResponse.json();
+
+			console.log(result);
+
+			if (result.updated_at) {
+				displayMessage("success", "Product deleted!", ".message-container");
+				location.reload();
+			}
+		} catch (error) {
+			console.log(error);
+		}
 	}
 }
 

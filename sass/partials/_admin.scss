@@ -1,6 +1,34 @@
 .edit-section {
-	.edit-list {
+	.admin-product-img {
+		width: 125px;
+		height: 125px;
+		object-fit: cover;
+	}
+	ul {
+		border: 1px solid red;
+		list-style-type: none;
 		width: 80%;
+		max-width: 500px;
 		margin: 0 auto;
+		margin-top: 50px;
+		padding-left: 0;
+	}
+	img {
+		border: 1px solid red;
+	}
+	li {
+		display: flex;
+		margin-bottom: 25px;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.edit-options {
+		border: 1px solid red;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 125px;
+		height: 125px;
 	}
 }

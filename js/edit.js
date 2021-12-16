@@ -3,7 +3,6 @@ import { getToken } from "./components/storage.js";
 import { url } from "./data/api.js";
 import { displaySearchBar } from "./components/search.js";
 import { messageDiv } from "./data/variables.js";
-
 import { displayMessage } from "./components/displayMessage.js";
 
 adminMenu();
@@ -101,8 +100,6 @@ async function updateProduct(
 	featured,
 	id
 ) {
-	console.log(productImg);
-
 	const editUrl = url + "/products/" + id;
 
 	console.log(editUrl);
@@ -130,6 +127,7 @@ async function updateProduct(
 
 		if (result.updated_at) {
 			displayMessage("success", "Product updated", messageDiv);
+			editForm.reset();
 		}
 		if (result.error) {
 			displayMessage("error", result.message, messageDiv);

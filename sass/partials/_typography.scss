@@ -279,7 +279,15 @@ form {
 		}
 	}
 }
-
+.edit-section {
+	h3 {
+		font-family: $primary-heading-font;
+		font-size: 1em;
+		text-align: center;
+		color: $secondary-brown;
+		text-decoration: underline;
+	}
+}
 // Footer
 
 footer {
