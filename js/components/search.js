@@ -32,12 +32,17 @@ function searchProducts(products) {
 				product.description.toLowerCase().includes(searchValue)
 		);
 
-		for (let i = 0; i < filteredProduct.length; i++) {
-			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title} ></a></li>`;
+		if (filteredProduct.length === 0) {
+			searchContainer.style.display = "block";
+			searchContainer.innerHTML = "No results!";
 		}
 
-		if (!searchValue.length || !filteredProduct) {
-			searchContainer.innerHTML = "No results!";
+		for (let i = 0; i < filteredProduct.length; i++) {
+			searchContainer.style.display = "block";
+			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title} ></a></li>`;
+		}
+		if (!searchValue.length) {
+			searchContainer.style.display = "none";
 		}
 	};
 }

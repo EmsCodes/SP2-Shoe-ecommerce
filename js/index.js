@@ -11,8 +11,6 @@ logOut();
 
 cartCounter();
 
-displaySearchBar();
-
 // display searchbar function for mobile and tablet
 const searchBtn = document.querySelector(".search-icon");
 searchBtn.addEventListener("click", displaySearchBar);
