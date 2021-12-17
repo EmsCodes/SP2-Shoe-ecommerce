@@ -10,7 +10,6 @@ body {
 	width: 100%;
 }
 main {
-	min-height: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -18,6 +17,7 @@ main {
 }
 .wrapper {
 	max-width: 1280px;
+	// min-height: 100%;
 }
 
 .footer {

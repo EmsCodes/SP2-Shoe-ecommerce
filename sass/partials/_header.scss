@@ -138,16 +138,20 @@ header {
 		.navbar {
 			padding-top: 0;
 			padding-bottom: 0;
+			justify-content: space-between;
 		}
 		.container-fluid {
-			width: 90%;
+			width: 100%;
+		}
+		.navbar {
+			padding: 10px 0;
 		}
 		#navbarNav {
 			flex-grow: 0;
+			margin-left: 15%;
 		}
 		.menu-container {
 			order: 1;
-			height: 100px;
 		}
 		.icon-flex {
 			display: flex;
@@ -175,6 +179,7 @@ header {
 		}
 		.fa-shopping-cart {
 			position: relative;
+			margin-left: 20px;
 		}
 		.cart-counter {
 			position: absolute;
