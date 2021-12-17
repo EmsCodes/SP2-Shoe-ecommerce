@@ -1,5 +1,10 @@
 footer {
-	background-color: $secondary-brown;
+	background: linear-gradient(
+		180deg,
+		rgba(168, 89, 46, 1) 0%,
+		rgba(115, 64, 33, 1) 50%,
+		rgba(64, 33, 15, 1) 100%
+	);
 	color: $white;
 	.footer-logo {
 		width: 50px;

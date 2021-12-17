@@ -1,4 +1,5 @@
 import { getUsername, getToken } from "./storage.js";
+import { cartCounter } from "./functions.js";
 
 const userName = getUsername();
 const token = getToken();

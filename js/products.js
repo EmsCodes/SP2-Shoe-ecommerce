@@ -3,6 +3,9 @@ import { url } from "./data/api.js";
 import createProducts from "./ui/products.js";
 import { productContainer } from "./data/variables.js";
 import { adminMenu, logOut } from "./components/adminMenu.js";
+import { cartCounter } from "./components/functions.js";
+
+cartCounter();
 
 adminMenu();
 logOut();

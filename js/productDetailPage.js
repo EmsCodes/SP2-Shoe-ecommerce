@@ -3,7 +3,11 @@ import { fetchProductDetails } from "./ui/fetchProduct.js";
 import { detailsContainer } from "./data/variables.js";
 import { adminMenu, logOut } from "./components/adminMenu.js";
 import { displaySearchBar } from "./components/search.js";
+import { cartCounter } from "./components/functions.js";
 
+cartCounter();
+
+// cartCounter();
 adminMenu();
 logOut();
 

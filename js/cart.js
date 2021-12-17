@@ -4,9 +4,19 @@ import {
 	getToken,
 } from "./components/storage.js";
 import { adminMenu, logOut } from "./components/adminMenu.js";
+import { displaySearchBar } from "./components/search.js";
+import { cartCounter } from "./components/functions.js";
+
+cartCounter();
 
 adminMenu();
 logOut();
+
+displaySearchBar();
+// display searchbar function for mobile and tablet
+const searchBtn = document.querySelector(".search-icon");
+searchBtn.addEventListener("click", displaySearchBar);
+searchBtn.addEventListener("onkeyup", displaySearchBar);
 
 const token = getToken();
 
@@ -23,11 +33,10 @@ function getCart(cartItems) {
 	cartList.innerHTML = "";
 
 	cartItems.forEach((item) => {
-		const price = parseInt(item.productPrice);
-
-		if (item.length === 0) {
+		if (item.length) {
 			cartList.innerHTML = "Cart Empty!";
 		}
+		const price = parseInt(item.productPrice);
 
 		const priceContainer = document.querySelector(".price-total");
 		const itemNumber = document.querySelector(".items-in-cart");
@@ -81,6 +90,7 @@ function removeItem() {
 
 	getCart(newCart);
 	saveToStorage("cart", newCart);
+	cartCounter();
 
 	if (newCart.length === 0) {
 		cartList.innerHTML = "Cart Empty!";

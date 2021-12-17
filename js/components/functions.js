@@ -136,7 +136,6 @@ export function createProducts(data, container) {
 		btn.addEventListener("click", deleteProduct);
 	});
 }
-
 async function deleteProduct() {
 	const id = this.dataset.id;
 
@@ -172,32 +171,9 @@ async function deleteProduct() {
 export function cartCounter() {
 	const cartCount = document.querySelector(".cart-counter");
 
-	for (let i = 0; i < currentCart.length; i++) {
-		console.log(i);
+	const cartAmount = getFromStorage("cart");
 
-		cartCount.innerHTML = currentCart.length;
-	}
-}
-
-// add to cart
-export function addToCart() {
-	const currentCart = getFromStorage("cart");
-	console.log(currentCart);
-
-	const productId = this.dataset.id;
-	const productTitle = this.dataset.title;
-	const productPrice = this.dataset.price;
-	const productImage = this.dataset.image;
-
-	const newProduct = {
-		productId,
-		productTitle,
-		productPrice,
-		productImage,
-	};
-	currentCart.push(newProduct);
-
-	saveToStorage("cart", currentCart);
+	cartCount.innerHTML = cartAmount.length;
 }
 
 // form check

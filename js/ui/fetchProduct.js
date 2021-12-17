@@ -1,5 +1,6 @@
 import { url } from "../data/api.js";
-import { addToCart } from "../components/functions.js";
+import { getFromStorage, saveToStorage } from "../components/storage.js";
+import { cartCounter } from "../components/functions.js";
 
 export function fetchProductDetails(product, container) {
 	const detailsContainer = document.querySelector(container);
@@ -83,4 +84,26 @@ export function fetchProductDetails(product, container) {
 	const buyBtn = document.querySelector(".buy-btn");
 
 	buyBtn.addEventListener("click", addToCart);
+}
+
+// add to cart
+function addToCart() {
+	const currentCart = getFromStorage("cart");
+	console.log(currentCart);
+
+	const productId = this.dataset.id;
+	const productTitle = this.dataset.title;
+	const productPrice = this.dataset.price;
+	const productImage = this.dataset.image;
+
+	const newProduct = {
+		productId,
+		productTitle,
+		productPrice,
+		productImage,
+	};
+	currentCart.push(newProduct);
+
+	saveToStorage("cart", currentCart);
+	cartCounter();
 }
