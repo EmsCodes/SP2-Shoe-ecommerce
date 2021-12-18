@@ -26,20 +26,22 @@ if (!token) {
 
 const cart = getFromStorage("cart");
 const cartList = document.querySelector(".shopping-list");
+const priceContainer = document.querySelector(".price-total");
 
 function getCart(cartItems) {
 	let totalPrice = 0;
 
 	cartList.innerHTML = "";
 
-	cartItems.forEach((item) => {
-		if (item.length) {
-			cartList.innerHTML = "Cart Empty!";
-		}
-		const price = parseInt(item.productPrice);
+	if (cartItems.length === 0) {
+		cartList.innerHTML = "Cart empty!";
+		cartList.style.textAlign = "center";
+		cartList.style.padding = "100px";
+		cartList.style.fontSize = "1.5em";
+	}
 
-		const priceContainer = document.querySelector(".price-total");
-		const itemNumber = document.querySelector(".items-in-cart");
+	cartItems.forEach((item) => {
+		const price = parseFloat(item.productPrice);
 
 		const itemId = item.productId;
 
@@ -89,6 +91,7 @@ function removeItem() {
 	getCart(newCart);
 	saveToStorage("cart", newCart);
 	cartCounter();
+	location.reload();
 
 	if (newCart.length === 0) {
 		cartList.innerHTML = "Cart Empty!";

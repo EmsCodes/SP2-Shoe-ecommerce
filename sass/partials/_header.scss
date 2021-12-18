@@ -20,10 +20,10 @@ header {
 		justify-content: space-evenly;
 		width: 100%;
 		background: $light-beige;
-		color: $red;
+		color: $secondary-brown;
 		font-size: 0.9em;
-		padding-top: 7.5px;
-		padding-bottom: 7.5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		p {
 			max-width: 30vw;
 			display: flex;
@@ -38,7 +38,7 @@ header {
 		}
 		.fas,
 		.far {
-			color: $red;
+			color: $secondary-brown;
 			font-size: 0.9em;
 			margin-left: 5px;
 		}
@@ -84,51 +84,33 @@ header {
 		li {
 			font-family: $secondary-heading-font;
 			font-size: 1.3em;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+			@include dotted-border(1px, dashed, $secondary-brown);
 		}
 	}
-	.fa-shopping-cart {
+	.cart-container {
 		position: relative;
 	}
 	.cart-counter {
 		position: absolute;
+		display: block;
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
 		background-color: $red;
-		bottom: 35%;
+		top: -30%;
 		left: 80%;
 		color: $white;
 		text-align: center;
-		font-size: 0.8em;
+		font-size: 1em;
 	}
 }
 @media (min-width: 750px) {
 	header {
 		.shop-top-info {
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: space-evenly;
-			width: 100%;
-			background-color: $light-beige;
-			color: $red;
-			font-size: 0.9em;
-			padding-top: 7.5px;
-			padding-bottom: 7.5px;
-			p {
-				max-width: 30vw;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-			span {
-				display: block;
-			}
+			font-size: 1.1em;
 			.fas,
 			.far {
-				color: $red;
-				font-size: 0.9em;
-				margin-left: 5px;
+				font-size: 1em;
 			}
 		}
 	}

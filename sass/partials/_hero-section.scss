@@ -14,8 +14,12 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #000;
-	opacity: 35%;
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.5018207966780462) 0%,
+		rgba(0, 0, 0, 0.4962185557816877) 75%,
+		rgba(0, 0, 0, 0.9023810207676821) 100%
+	);
 }
 
 @media (min-width: 700px) {
@@ -28,7 +32,6 @@
 @media (min-width: 1000px) {
 	.hero-background {
 		height: 400px;
-		background-position: bottom;
 	}
 }
 @media (min-width: 1400px) {
