@@ -103,13 +103,37 @@ header {
 }
 // forms
 .form-wrapper {
-	background: $beige-linear-gradient;
+	background: url(/images/factory.jpg);
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.5018207966780462) 0%,
+			rgba(0, 0, 0, 0.4962185557816877) 75%,
+			rgba(0, 0, 0, 0.9023810207676821) 100%
+		);
+	}
 
 	.login-form {
-		width: 100%;
+		width: 85%;
+		max-width: 500px;
+		position: relative;
+		z-index: 5;
 		margin: 0 auto;
 		padding-top: 50px;
 		padding-bottom: 50px;
+		margin-top: 25%;
+		background: rgba(255, 255, 255, 0.411);
 
 		fieldset {
 			width: 85%;
@@ -158,7 +182,7 @@ header {
 		input {
 			display: block;
 			width: 100%;
-			width: 350px;
+			max-width: 300px;
 		}
 		input[type="search"] {
 			padding: 7.5px 5px;

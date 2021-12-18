@@ -7320,6 +7320,7 @@ main {
 
 .wrapper {
   max-width: 1280px;
+  min-height: 75%;
 }
 
 .footer {
@@ -7581,17 +7582,6 @@ header .header-icons {
   font-size: 1em;
 }
 
-.rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.rating .fa-star {
-  font-size: 0.7em;
-  margin-right: 2px;
-}
-
 .navbar-toggler {
   border: none !important;
   margin-right: 5%;
@@ -7758,6 +7748,9 @@ header .cart-counter {
 }
 
 @media (min-width: 992px) {
+  header .navbar-brand {
+    margin-left: 5%;
+  }
   header .navbar {
     padding-top: 0;
     padding-bottom: 0;
@@ -7768,19 +7761,17 @@ header .cart-counter {
   header .container-fluid, header .container-sm, header .container-md, header .container-lg, header .container-xl, header .container-xxl {
     width: 100%;
   }
-  header .navbar {
-    padding: 10px 0;
-  }
   header #navbarNav {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    margin-left: 15%;
+    margin-left: 12%;
   }
   header .menu-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-right: 5%;
   }
   header .icon-flex {
     display: -webkit-box;
@@ -8384,15 +8375,34 @@ header .search-results li {
 }
 
 .form-wrapper {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 221, 190, 0.896779)), color-stop(50%, #efc19a), to(#efb07b));
-  background: linear-gradient(180deg, rgba(255, 221, 190, 0.896779) 0%, #efc19a 50%, #efb07b 100%);
+  background: url(/images/factory.jpg);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.501821)), color-stop(75%, rgba(0, 0, 0, 0.496219)), to(rgba(0, 0, 0, 0.902381)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.501821) 0%, rgba(0, 0, 0, 0.496219) 75%, rgba(0, 0, 0, 0.902381) 100%);
 }
 
 .form-wrapper .login-form {
-  width: 100%;
+  width: 85%;
+  max-width: 500px;
+  position: relative;
+  z-index: 5;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 25%;
+  background: rgba(255, 255, 255, 0.411);
 }
 
 .form-wrapper .login-form fieldset {
@@ -8438,7 +8448,7 @@ header .search-results li {
   header input {
     display: block;
     width: 100%;
-    width: 350px;
+    max-width: 300px;
   }
   header input[type="search"] {
     padding: 7.5px 5px;

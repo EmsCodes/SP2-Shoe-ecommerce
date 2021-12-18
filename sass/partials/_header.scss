@@ -117,6 +117,9 @@ header {
 }
 @media (min-width: 992px) {
 	header {
+		.navbar-brand {
+			margin-left: 5%;
+		}
 		.navbar {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -125,15 +128,13 @@ header {
 		.container-fluid {
 			width: 100%;
 		}
-		.navbar {
-			padding: 10px 0;
-		}
 		#navbarNav {
 			flex-grow: 0;
-			margin-left: 15%;
+			margin-left: 12%;
 		}
 		.menu-container {
 			order: 1;
+			margin-right: 5%;
 		}
 		.icon-flex {
 			display: flex;
