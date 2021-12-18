@@ -1,5 +1,9 @@
 .message {
-	width: 100%;
+	position: relative;
+	z-index: 25;
+	width: 50vw;
+	margin: 0 auto;
+	margin-top: 25px;
 	max-width: 400px;
 	border: 1px solid #000;
 	padding: 15px;
@@ -19,7 +23,7 @@
 
 .error {
 	@extend .message;
-	background: #9f1c1a73;
+	background: #9f1c1abb;
 	border-color: $red;
-	color: $dark-brown;
+	color: $white;
 }

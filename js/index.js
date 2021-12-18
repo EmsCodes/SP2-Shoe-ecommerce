@@ -3,6 +3,7 @@ import heroBanner from "./ui/indexHeroBanner.js";
 import featuredProducts from "./ui/featuredProducts.js";
 import { displaySearchBar } from "./components/search.js";
 import { cartCounter } from "./components/functions.js";
+import { displayMessage } from "./components/displayMessage.js";
 
 import { adminMenu, logOut } from "./components/adminMenu.js";
 
@@ -29,10 +30,14 @@ async function fetchProducts() {
 
 		heroBanner(heroImage, heroContainer);
 		featuredProducts(products, carouselContainer);
-
-		// featuredProducts(products, container);
 	} catch (error) {
-		console.log(error);
+		const container = document.querySelector(carouselContainer);
+		container.style.width = "100%";
+		displayMessage(
+			"error",
+			"An error ocurred while fetching the products!",
+			carouselContainer
+		);
 	}
 }
 

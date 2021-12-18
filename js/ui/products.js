@@ -1,10 +1,7 @@
-import { getUsername } from "../components/storage.js";
-
-const userName = getUsername();
-
 export default function createProducts(products, container) {
 	const elementContainer = document.querySelector(container);
 
+	elementContainer.innerHTML = "";
 	for (let i = 0; i < products.length; i++) {
 		const img = products[i].image_url;
 

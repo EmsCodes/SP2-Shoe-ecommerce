@@ -4,6 +4,7 @@ import createProducts from "./ui/products.js";
 import { productContainer } from "./data/variables.js";
 import { adminMenu, logOut } from "./components/adminMenu.js";
 import { cartCounter } from "./components/functions.js";
+import { displayMessage } from "./components/displayMessage.js";
 
 cartCounter();
 
@@ -24,6 +25,11 @@ const productsUrl = url + "/products";
 
 		createProducts(data, productContainer);
 	} catch (error) {
+		displayMessage(
+			"error",
+			"An error ocurred while fetching the products!",
+			productContainer
+		);
 		console.log(error);
 	}
 })();

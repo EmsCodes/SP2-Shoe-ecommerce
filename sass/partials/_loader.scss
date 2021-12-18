@@ -1,0 +1,48 @@
+.loader-container {
+	width: 90vw;
+	height: 150px;
+	max-width: 1280px;
+}
+
+.loader {
+	position: relative;
+	transform: translateX(50%);
+	top: 45%;
+	left: 50%;
+	width: 25px;
+	height: 10px;
+	background-color: $light-beige;
+	color: $secondary-brown;
+	animation: dotAnimation 1s infinite alternate;
+	animation-delay: 0.9s;
+}
+
+.loader::before,
+.loader::after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 10px;
+	background-color: $light-beige;
+	color: $secondary-brown;
+	animation: dotAnimation 1s infinite alternate;
+}
+
+.loader::before {
+	left: -50px;
+	animation-delay: 0s;
+}
+
+.loader::after {
+	left: 50px;
+	animation-delay: 1.2s;
+}
+
+@keyframes dotAnimation {
+	0% {
+		background-color: $secondary-brown;
+	}
+	100% {
+		background-color: $light-beige;
+	}
+}

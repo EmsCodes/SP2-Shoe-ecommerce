@@ -41,8 +41,6 @@ function getCart(cartItems) {
 		const priceContainer = document.querySelector(".price-total");
 		const itemNumber = document.querySelector(".items-in-cart");
 
-		itemNumber.innerHTML = item;
-
 		const itemId = item.productId;
 
 		totalPrice += price;
