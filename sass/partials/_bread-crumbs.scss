@@ -1,9 +1,10 @@
 .breadcrumbs {
-	margin-top: 15px;
+	margin-top: 25px;
+	max-width: 1280px;
 	ul {
 		display: flex;
 		flex-flow: row nowrap;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 		padding-left: 5%;
 	}
 	a {
@@ -16,8 +17,20 @@
 		font-size: 1em;
 		margin-left: 5px;
 	}
+	li:hover {
+		text-decoration: underline;
+	}
 	.active {
 		color: $secondary-brown;
 		text-decoration: underline;
+	}
+}
+
+@media (min-width: 750px) {
+	.breadcrumbs {
+		margin-top: 25px;
+		li {
+			font-size: 1.2em;
+		}
 	}
 }

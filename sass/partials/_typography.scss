@@ -333,10 +333,16 @@ form {
 	}
 }
 .edit-section {
+	h2,
+	h3 {
+		text-align: center;
+	}
+	h2 {
+		margin-top: 25px;
+	}
 	h3 {
 		font-family: $primary-heading-font;
 		font-size: 1.2em;
-		text-align: center;
 		color: $dark-brown;
 		text-decoration: underline;
 	}
