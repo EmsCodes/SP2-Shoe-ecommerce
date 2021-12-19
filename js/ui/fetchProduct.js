@@ -2,6 +2,8 @@ import { url } from "../data/api.js";
 import { getFromStorage, saveToStorage } from "../components/storage.js";
 import { cartCounter } from "../components/functions.js";
 
+cartCounter();
+
 export function fetchProductDetails(product, container) {
 	const detailsContainer = document.querySelector(container);
 
@@ -84,12 +86,17 @@ export function fetchProductDetails(product, container) {
 	const buyBtn = document.querySelector(".buy-btn");
 
 	buyBtn.addEventListener("click", addToCart);
+
+	closingX.onclick = function () {
+		addMessage.style.display = "none";
+	};
 }
 
 // add to cart
 function addToCart() {
 	const currentCart = getFromStorage("cart");
-	console.log(currentCart);
+	const addMessage = document.querySelector(".add-message");
+	const closingX = document.querySelector(".fa-times");
 
 	const productId = this.dataset.id;
 	const productTitle = this.dataset.title;
@@ -106,4 +113,11 @@ function addToCart() {
 
 	saveToStorage("cart", currentCart);
 	cartCounter();
+	addMessage.style.display = "block";
+	addMessage.innerHTML = `
+    <p>Product added to cart!<i class="fas fa-check-circle"></i></p>
+    <div class="message-navigation">
+      <a href="products.html"> < Continue shopping</a>
+      <a href="cart.html">Go to cart ></a>
+    </div>`;
 }

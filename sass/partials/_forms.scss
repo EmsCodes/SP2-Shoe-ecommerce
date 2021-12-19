@@ -86,6 +86,7 @@ header {
 .edit-product,
 .delete-product {
 	width: 100%;
+	max-width: 700px;
 	margin: 0 auto;
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -109,6 +110,13 @@ header {
 	}
 	.product-featured {
 		display: block;
+	}
+	.product-featured {
+		input {
+			width: 20px;
+			height: 20px;
+			margin-top: 5px;
+		}
 	}
 }
 

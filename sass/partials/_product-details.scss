@@ -1,3 +1,41 @@
+.add-message {
+	display: none;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	width: 85vw;
+	max-width: 350px;
+	z-index: 30;
+	padding: 50px;
+	transform: translateX(-50%);
+	background: $white;
+	box-shadow: $box-shadow;
+	color: $green;
+
+	a,
+	p {
+		font-family: $secondary-heading-font;
+	}
+	p {
+		text-align: center;
+		font-size: 1.5em;
+		margin-bottom: 25px;
+	}
+	.message-navigation {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			color: $secondary-brown;
+			font-size: 1.2em;
+			text-decoration: none;
+			border-bottom: 1px dashed $white;
+		}
+		a:hover {
+			@include dotted-border(1px, dashed, $secondary-brown);
+		}
+	}
+}
 .product-detail-container {
 	max-width: 700px;
 	width: 100%;

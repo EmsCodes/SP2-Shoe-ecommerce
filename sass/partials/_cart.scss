@@ -38,6 +38,8 @@
 		align-content: center;
 
 		.cart-images {
+			position: sticky;
+			top: 10%;
 			width: 90%;
 			height: 75vh;
 			margin-top: 75px;
