@@ -49,12 +49,9 @@ fetchProducts();
 const carousel = document.querySelector(".carousel");
 const previous = document.querySelector(".previous");
 const next = document.querySelector(".next");
+const featuredContainer = document.querySelector(".featured-products");
 
-let carouselWidth = document.querySelector(".featured-products").offsetWidth;
-
-window.addEventListener("resize", () => {
-	carouselWidth = document.querySelector(".featured-products").offsetWidth;
-});
+let carouselWidth = featuredContainer.offsetWidth;
 
 let index = 0;
 
@@ -75,4 +72,8 @@ previous.addEventListener("click", () => {
 		previous.classList.remove("show");
 	}
 	carousel.style.transform = `translateX(${-index * carouselWidth}px)`;
+});
+
+window.addEventListener("resize", () => {
+	carouselWidth = featuredContainer.offsetWidth;
 });

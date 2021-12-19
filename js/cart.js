@@ -52,7 +52,7 @@ function getCart(cartItems) {
 		cartList.innerHTML += `<li class="cart-item"> 
       <div>
 			<a href="product-page.html?id=${itemId}"class="product-link">
-        <img src="${item.productImage}" class="product-img alt="product alt text">
+        <img src="${item.productImage}" class="product-img" alt="product alt text">
       </a>
         <p class="product-brand">Brand</p>
         <a href="product-page.html?id=${itemId}"class="product-link">
@@ -63,7 +63,7 @@ function getCart(cartItems) {
 				<p>Size: 10</p>
         <p>Colour: Colour</p>
         <p class="price">$${item.productPrice}</p>
-				<button class="remove-btn" data-id="${itemId}"><i class="fas fa-times" data-id="${itemId}"></i></button>
+				<button class="remove-btn" data-id="${itemId}"><i class="fas fa-times" data-id="${itemId}" aria-hidden="true"></i><span class="sr-only">Remove item from cart</span></button>
       </div>
     </li>`;
 
@@ -94,7 +94,7 @@ function removeItem() {
 	location.reload();
 
 	if (newCart.length === 0) {
-		cartList.innerHTML = "Cart Empty!";
+		cartList.innerHTML = "<li>Cart Empty!</li>";
 	}
 }
 

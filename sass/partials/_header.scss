@@ -166,17 +166,12 @@ header {
 		.fa-shopping-cart {
 			position: relative;
 			margin-left: 20px;
+			margin-top: 10px;
 		}
 		.cart-counter {
-			position: absolute;
-			width: 20px;
-			height: 25px;
 			border-radius: 50%;
-			background-color: $red;
 			left: 80%;
-			color: $white;
-			text-align: center;
-			font-size: 1em;
+			top: 10%;
 		}
 	}
 }

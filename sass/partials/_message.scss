@@ -11,9 +11,9 @@
 }
 .success {
 	@extend .message;
-	background: #828c5e;
+	background: #828c5ede;
 	border-color: $green;
-	color: $white;
+	color: $dark-brown;
 }
 .warning {
 	@extend .message;

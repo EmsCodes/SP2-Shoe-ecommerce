@@ -16,7 +16,7 @@
 		/>
 		<link rel="stylesheet" href="https://use.typekit.net/wvv0hvk.css" />
 		<link rel="stylesheet" href="/css/style.css" />
-		<title>Handmade | Home</title>
+		<title>Handmade | Admin login page</title>
 	</head>
 	<body>
 		<header>
@@ -49,9 +49,7 @@
 								placeholder="Search for product..."
 							/>
 							<i class="fas fa-times"></i>
-							<ul class="search-results">
-								<li class="loader"></li>
-							</ul>
+							<ul class="search-results"></ul>
 						</form>
 						<div class="header-icons">
 							<button class="search-icon" aria-label="search form button">
@@ -87,14 +85,16 @@
 								<a class="nav-link" href="products.html">Products</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About</a>
+								<a class="nav-link" href="#contact-info">Contact</a>
 							</li>
 							<li class="nav-item admin-nav-link">
 								<a class="nav-link" href="admin.html">Edit product(s)</a>
 							</li>
 						</ul>
 						<div class="nav-item">
-							<button class="log-out-btn">Log out</button>
+							<button class="log-out-btn">
+								Log out<i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -104,9 +104,7 @@
 			<form action="post" class="login-form">
 				<fieldset>
 					<div class="message-container"></div>
-					<legend>
-						<h1>Admin login</h1>
-					</legend>
+					<legend><h1>Admin login</h1></legend>
 					<div class="username">
 						<label for="username">Username</label>
 						<input
@@ -137,20 +135,25 @@
 		</main>
 		<footer>
 			<div class="wrapper">
+				<section class="about">
+					<h5>About Handmade</h5>
+					<p>
+						Handmade have been making quality handmade shoes for men and women
+						through generations. A family business dating back to early 1900's.
+						We specialize in leather shoes, tailored to fit your feet perfectly.
+					</p>
+				</section>
 				<section class="footer-navigation">
-					<a href="index.html">
-						<img src="/images/Logo.png" alt="Handmade logo" />
-					</a>
 					<nav aria-label="Footer navigation">
 						<ul>
 							<li><a href="about.html">Contact</a></li>
 							<li><a href="about.html">Help</a></li>
-							<li><a href="about.html">About</a></li>
 							<li><a href="about.html">FAQ</a></li>
 							<li><a href="login.html">Admin login</a></li>
 						</ul>
 					</nav>
 				</section>
+				<a id="contact-info" aria-hidden="true"></a>
 				<section class="contact-info">
 					<p>Adress, 0000</p>
 					<p>handmade@handmade.com</p>

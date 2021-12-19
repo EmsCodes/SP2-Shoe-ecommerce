@@ -96,7 +96,6 @@ export function fetchProductDetails(product, container) {
 function addToCart() {
 	const currentCart = getFromStorage("cart");
 	const addMessage = document.querySelector(".add-message");
-	const closingX = document.querySelector(".fa-times");
 
 	const productId = this.dataset.id;
 	const productTitle = this.dataset.title;
