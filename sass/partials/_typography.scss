@@ -54,26 +54,42 @@ form {
 		max-width: 300px;
 		margin: 0 auto;
 	}
-	// .anno-text {
-	// 	font-family: $primary-heading-font;
-	// 	font-style: italic;
-	// 	border-radius: 50%;
-	// 	border: 2px dotted $beige-text;
-	// 	padding: 20px;
-	// 	margin-top: 10px;
-	// 	margin-bottom: 20px;
-	// 	font-size: 0.7em;
-	// 	width: 30%;
-	// }
 	h1 {
 		padding-top: 50px;
 		font-size: 2.5em;
 		border-bottom: 1px dashed $beige-text;
 	}
 	p {
-		margin-top: 10px;
+		margin-top: 15px;
 		font-size: 1.2em;
 		margin-bottom: 20px;
+		line-height: 1.5;
+	}
+	span {
+		background: #ffead6b0;
+		color: $brown-text;
+		padding: 0 4px;
+		border-radius: 3px;
+	}
+	span:nth-of-type(1) {
+		animation: fade-in 2s ease-in;
+	}
+	span:nth-of-type(2) {
+		animation: fade-in 3s ease-in;
+	}
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+		25% {
+			opacity: 25%;
+		}
+		50% {
+			opacity: 50%;
+		}
+		100% {
+			opacity: 100%;
+		}
 	}
 }
 
@@ -319,9 +335,9 @@ form {
 .edit-section {
 	h3 {
 		font-family: $primary-heading-font;
-		font-size: 1em;
+		font-size: 1.2em;
 		text-align: center;
-		color: $secondary-brown;
+		color: $dark-brown;
 		text-decoration: underline;
 	}
 }

@@ -39,7 +39,7 @@ function searchProducts(products) {
 
 		for (let i = 0; i < filteredProduct.length; i++) {
 			searchContainer.style.display = "block";
-			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title} ></a></li>`;
+			searchContainer.innerHTML += `<li><a href="product-page.html?id=${filteredProduct[i].id}">${filteredProduct[i].title} -></a></li>`;
 		}
 		if (!searchValue.length) {
 			searchContainer.style.display = "none";

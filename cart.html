@@ -49,13 +49,11 @@
 								placeholder="Search for product..."
 							/>
 							<i class="fas fa-times"></i>
-							<ul class="search-results">
-								<li class="loader"></li>
-							</ul>
+							<ul class="search-results"></ul>
 						</form>
 						<div class="header-icons">
 							<button class="search-icon" aria-label="search form button">
-								<i class="fas fa-search"></i>
+								<i class="fas fa-search" aria-hidden="true"></i>
 							</button>
 							<a href="cart.html" aria-label="shopping cart">
 								<div class="cart-container">
@@ -94,7 +92,9 @@
 							</li>
 						</ul>
 						<div class="nav-item">
-							<button class="log-out-btn">Log out</button>
+							<button class="log-out-btn">
+								Log out<i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -102,26 +102,28 @@
 		</header>
 		<main>
 			<section class="shopping-cart">
-				<h1>Shopping cart</h1>
-				<div class="product-info">
-					<p>Product</p>
-					<p>Product info</p>
+				<div>
+					<h1>Shopping cart</h1>
+					<div class="product-info">
+						<p>Product</p>
+						<p>Product info</p>
+					</div>
+					<ul class="shopping-list">
+						<div class="loader"></div>
+					</ul>
+					<div class="shop-link">
+						<a href="products.html">Continue shopping</a>
+					</div>
+					<div class="order-summary">
+						<h3>Order summary</h3>
+						<p>Shipping: Free</p>
+						<p>Total price: $<span class="price-total">0</span></p>
+					</div>
 				</div>
-				<ul class="shopping-list">
-					<div class="loader"></div>
-					<!-- <li class="shopping-item">
-            <div class="cart-item">
-              <div class="loader"></div>
-            </div>
-          </li> -->
-				</ul>
-				<div class="shop-link">
-					<a href="products.html">Continue shopping</a>
-				</div>
-				<div class="order-summary">
-					<h3>Order summary</h3>
-					<p>Shipping: Free</p>
-					<p>Total price: $<span class="price-total">0</span></p>
+				<div class="cart-images">
+					<div class="cart-image"></div>
+					<div class="cart-image"></div>
+					<div class="cart-image"></div>
 				</div>
 			</section>
 		</main>

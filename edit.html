@@ -39,7 +39,7 @@
 						/></a>
 					</div>
 					<div class="menu-container">
-						<form class="search-bar" style="display: none" autocomplete="off">
+						<form class="search-bar" autocomplete="off">
 							<label for="search"><span class="sr-only">Search</span></label>
 							<input
 								type="search"
@@ -49,18 +49,17 @@
 								placeholder="Search for product..."
 							/>
 							<i class="fas fa-times"></i>
-							<ul class="search-results">
-								<div class="loader"></div>
-							</ul>
+							<ul class="search-results"></ul>
 						</form>
 						<div class="header-icons">
 							<button class="search-icon" aria-label="search form button">
-								<i class="fas fa-search" alt="search icon"></i>
+								<i class="fas fa-search"></i>
 							</button>
 							<a href="cart.html" aria-label="shopping cart">
-								<i class="fas fa-shopping-cart"
-									><div class="cart-counter">0</div></i
-								>
+								<div class="cart-container">
+									<i class="fas fa-shopping-cart"></i>
+									<div class="cart-counter">0</div>
+								</div>
 							</a>
 						</div>
 						<button
@@ -93,7 +92,9 @@
 							</li>
 						</ul>
 						<div class="nav-item">
-							<button class="log-out-btn">Log out</button>
+							<button class="log-out-btn">
+								Log out<i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+							</button>
 						</div>
 					</div>
 				</div>

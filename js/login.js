@@ -4,8 +4,14 @@ import checkLength from "./components/functions.js";
 import { displayMessage } from "./components/displayMessage.js";
 import { getToken } from "./components/storage.js";
 import { adminMenu } from "./components/adminMenu.js";
+import { displaySearchBar } from "./components/search.js";
 
 adminMenu();
+
+// display searchbar function for mobile and tablet
+const searchBtn = document.querySelector(".search-icon");
+searchBtn.addEventListener("click", displaySearchBar);
+searchBtn.addEventListener("onkeyup", displaySearchBar);
 
 // const messageContainer = document.querySelector(".message-container");
 const loginForm = document.querySelector(".login-form");

@@ -1,6 +1,8 @@
 .shopping-cart {
 	width: 90%;
+	max-width: 1280px;
 	margin: 0 auto;
+	margin-bottom: 100px;
 	.product-info {
 		display: flex;
 		justify-content: space-evenly;
@@ -22,5 +24,61 @@
 		margin-bottom: 20px;
 		padding-bottom: 15px;
 		justify-content: space-evenly;
+	}
+}
+
+@media (min-width: 800px) {
+	.shopping-cart {
+		width: 90%;
+		margin-bottom: 150px;
+		margin-top: 50px;
+
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+
+		.cart-images {
+			width: 90%;
+			height: 75vh;
+			margin-top: 75px;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			.cart-image {
+				background: url("/images/passion.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 65%;
+				height: 75%;
+				margin: 0 auto;
+			}
+		}
+
+		.product-info {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+
+	.shopping-list {
+		width: 40vw;
+		max-width: 600px;
+		padding: 0;
+		margin-top: 50px;
+		.product-img {
+			width: 150px;
+			height: 125px;
+			object-fit: cover;
+		}
+
+		.cart-item {
+			margin: 0 auto;
+			display: flex;
+			border-bottom: $price-border;
+			margin-bottom: 20px;
+			padding-bottom: 15px;
+			justify-content: space-evenly;
+		}
 	}
 }
