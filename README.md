@@ -6,15 +6,15 @@
 
 Semester-project 2
 
-Ecommerce shoe shop
+Ecommerce shoe-shop
 
-- List item 1
-- List item 2
-- List item 3
+- API made with Strapi
+- Admin login, where admin can create, change or delete products
+- Customers can add products to cart, which will display products and total price
 
 ## Built With
 
-- [strapi](https://strapi.io/)
+- [Strapi](https://strapi.io/)
 - [Bootstrap](https://getbootstrap.com)
 - Javascript
 - HTML/CSS
