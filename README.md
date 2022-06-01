@@ -1,4 +1,4 @@
-# Your project title
+# Semester project 2
 
 ![image](images/devices-portfolio.png)
 
@@ -16,8 +16,8 @@ Ecommerce shoe shop
 
 - [strapi](https://strapi.io/)
 - [Bootstrap](https://getbootstrap.com)
-- [Javascript]
-- [HTML/CSS]
+- Javascript
+- HTML/CSS
 - [Sass](https://sass-lang.com/)
 
 ## Getting Started
