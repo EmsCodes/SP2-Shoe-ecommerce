@@ -1,1 +1,1 @@
-export const url = "http://localhost:1337";
+export const url = "https://holidaze-ems.herokuapp.com/api/auth/local";
