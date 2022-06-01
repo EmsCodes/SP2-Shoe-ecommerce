@@ -1,6 +1,6 @@
 # Your project title
 
-![image]("/Users/endremakra-stenklov/Desktop/Skrivebord – Endres MacBook Pro/frontend/JS frameworks/SP2-Shoe-ecommerce/images/devices-portfolio.png")
+![image](images/devices-portfolio.png)
 
 A simple overview of the use/purpose of the project.
 
