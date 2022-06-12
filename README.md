@@ -1,6 +1,6 @@
 # Semester project 2
 
-![image](images/devices-portfolio.png)
+![front page shown on different devices](images/devices-portfolio.png)
 
 ## Description
 
